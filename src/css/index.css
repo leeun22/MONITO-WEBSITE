@@ -188,13 +188,6 @@ body p {
     cursor: pointer;
 }
 
-
-/* MAIN */
-
-.main {
-    padding: 6rem 13rem 4rem 13rem;
-}
-
 .herro-banner {
     /* border: 1px solid; */
     width: 100%;
@@ -400,6 +393,13 @@ body p {
     color: var(--neutral-color-00, #FDFDFD);
     background: var(--primary-color-dark-blue, #003459);
     cursor: pointer;
+}
+
+
+/* MAIN */
+
+.main {
+    padding: 6rem 13rem 4rem 13rem;
 }
 
 
@@ -1244,7 +1244,7 @@ body p {
 
 body h2 {
     margin: 0;
-    display: none;
+    /* display: none; */
 }
 
 @media screen and (min-width: 0) {

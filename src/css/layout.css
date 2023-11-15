@@ -1,0 +1,319 @@
+/* các khối bao toàn bộ nội dung của từng phần*/
+
+.margin-block-large {
+    margin-block: 60px;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    /* desgin set width của container: 1180px, khi hiển thị trên mobile thấy có padding 2 cạnh là 16px
+       => vì add padding-inline: 16px => phải cộng thêm 2 bên 16px vào width = 1212px */
+    max-width: 1212px;
+    padding-inline: 16px;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+}
+
+
+/* các khối bao toàn bộ nội dung của card/content */
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    /* Vì các grid-item có khoảng cách nên sẽ thừa 2 bên đầu và cuối của khối 10px, vì vậy cần margin.. */
+    margin-inline: -10px;
+    /* gap: row column */
+    gap: 20px 0;
+}
+
+.grid__item {
+    /* tạo khoảng cách left-right giữa các khối grid-item tổng là:20px */
+    padding-inline: 10px;
+}
+
+
+/* Reponsive mobile kích thước từ 320px sẽ chia grid__item product: 2 cột, blog: 1 cột */
+
+@media (min-width: 320px) {
+    .grid-mobile-4-items .grid__item {
+        width: calc(100% / 2);
+    }
+    .grid-mobile-3-items .grid__item {
+        width: calc(100%);
+    }
+}
+
+
+/* Responsive tablet và desktop từ 576px sẽ chia grid__item product: 4 cột, blog: 3 cột */
+
+@media (min-width: 576px) {
+    .grid-tablet-4-items .grid__item {
+        width: calc(100% / 2);
+    }
+    .grid-tablet-3-items .grid__item {
+        width: calc(100%/3);
+    }
+}
+
+@media (min-width: 768px) {
+    .grid-desktop-4-items .grid__item {
+        width: calc(100% / 3);
+    }
+}
+
+@media (min-width: 1024px) {
+    .grid-desktop-4-items .grid__item {
+        width: calc(100% / 4);
+    }
+}
+
+
+/* draf-responsive menu */
+
+@media (max-width: 1200px) {
+    #grid-tablet-banner-2-iteams {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .content-banner-header {
+        padding-block: 100px 25px;
+    }
+    .cubic-image-banner-header img {
+        width: 414px;
+        height: 386px;
+    }
+}
+
+@media (max-width: 1207px) {
+    .section-banner-header {
+        background-position: left;
+    }
+    .tablet-menu-block {
+        display: block;
+    }
+    .sidenav {
+        position: fixed;
+        background-color: #003459b3;
+        flex-direction: column;
+        width: 0;
+        height: 100%;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        padding-top: 60px;
+        text-align: center;
+        display: flex;
+    }
+    .closebtn {
+        display: block;
+    }
+    .sidenav a {
+        color: #FFF;
+    }
+    .container-header .tablet-menu:nth-of-type(1) {
+        order: 2;
+    }
+    .container-header .tablet-menu:nth-of-type(2) {
+        order: 1;
+    }
+    .container-header .tablet-menu:nth-of-type(3) {
+        order: 3;
+    }
+    .container-header {
+        justify-content: space-between;
+        padding-inline: 10px 14px;
+    }
+}
+
+@media (max-width:992px) {
+    .btn-join {
+        display: none;
+    }
+    .nation {
+        display: none;
+    }
+}
+
+@media (max-width:768px) {
+    .search {
+        width: unset;
+    }
+    .search input[type="search"] {
+        display: none;
+    }
+    .search {
+        padding: 0;
+        background-color: unset;
+    }
+    .search button[type="submit"] {
+        font-size: 23px;
+        padding: 2px;
+        color: #003459;
+    }
+}
+
+@media (max-width:568px) {
+    .content-banner-1 {
+        font-size: 46px;
+        line-height: 1.3;
+    }
+    .content-banner-2 {
+        font-size: 28px;
+        line-height: 1.35;
+        margin-top: unset;
+    }
+    .content-banner-3 {
+        max-width: 382px;
+        font-size: 12px;
+        line-height: 1.5;
+        margin-block: 12px 32px;
+    }
+    .button-banner {
+        gap: 16px;
+    }
+    .subheading {
+        font-size: 14px;
+        line-height: 1.43;
+    }
+    .heading {
+        font-size: 20px;
+        line-height: 1.6;
+    }
+    .card-heading {
+        font-size: 14px;
+        line-height: 1.43;
+    }
+    .product-info {
+        display: grid;
+        gap: 4px;
+        font-size: 12px;
+        line-height: 1.5;
+        margin-block: 4px 8px;
+    }
+    .dot-grey {
+        display: none;
+    }
+    .card {
+        gap: 12px;
+    }
+    .card-body-product {
+        padding: 4px;
+    }
+    .product-price {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+    .section-header__view-more {
+        width: 100%;
+    }
+    .section-header__view-more-desktop {
+        display: none;
+    }
+    .section-header__view-more-mobile {
+        display: block;
+        margin-block: 16px;
+    }
+    .button-view-more {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+    .card-product {
+        padding: 8px;
+    }
+    .grid__item {
+        padding-inline: 6px;
+    }
+    .section-our-products {
+        display: none;
+    }
+    .section-pet-seller {
+        display: none;
+    }
+    .section-banner-main-2 {
+        display: none;
+    }
+    .section-footer {
+        margin-top: 40px;
+    }
+    .section-card,
+    .section-content {
+        margin-block: 20px;
+    }
+    .card-blog-heading,
+    .card-content-heading {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+    .card-content-heading {
+        margin-top: 6px;
+    }
+}
+
+
+/* ====FOOTER RESPONSIVE=== */
+
+@media screen and (max-width: 1432px) {
+    .register-contact {
+        display: flex;
+    }
+    /* nth-of-type: SX lại thứ tự các phần tử có cùng kiểu span với thuộc tính order dùng cho flexbox */
+    .cont-footer-nth:nth-of-type(1) {
+        order: 3;
+        margin-top: 8px;
+    }
+    .cont-footer-nth:nth-of-type(3) {
+        order: 2;
+    }
+    .cont-footer-nth:nth-of-type(2) {
+        order: 1;
+    }
+}
+
+@media (min-width: 1051px) and (max-width: 1200px) {
+    .info-contact {
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+    .input-email {
+        width: 85%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .info-contact {
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    .register-form {
+        flex-wrap: wrap;
+        width: unset
+    }
+    .btn-subcribe,
+    .cont-form-register {
+        width: 100%;
+    }
+}
+
+@media (min-width: 415px) and (max-width: 1050px) {
+    .register-contact {
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: 573px) {
+    .terms-privacy {
+        margin-top: 32px;
+    }
+    .section-footer {
+        padding-bottom: 115px;
+    }
+}

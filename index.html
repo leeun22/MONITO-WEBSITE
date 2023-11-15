@@ -4,25 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link type="text/css" href="./src/css/index.css" rel="stylesheet">
+    <link type="text/css" href="./src/css/style.css" rel="stylesheet">
+    <link type="text/css" href="./src/css/layout.css" rel="stylesheet">
     <link rel="stylesheet" href="./src/fonts/svn-gilroy/style.css">
+    <script src="./src/js/library.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <title>[Bravebits] Test</title>
+    <title>Monito Website</title>
 </head>
 
 <body>
-    <header class="header">
-        <section class="header-desktop">
-            <h2>Monito - Pets for Best</h2>
-            <div class="logo">
-                <a href="#"><img src="./src/images/Logo.svg" alt="Monito"></a>
+    <header class="section section-header-menu">
+        <div class="container container-header">
+            <div class="logo tablet-menu">
+                <a href="./index.html"><img src="./src/images/svg/Logo.svg" alt="Monito"></a>
             </div>
 
-            <div class="menu">
-                <span class="bar-menu" onclick="openNav()"> <i class="fa-solid fa-bars"></i> </span>
+            <div class="menu tablet-menu">
+                <span class="bar-menu tablet-menu-block" onclick="openNav()"> <i class="fa-solid fa-bars"></i> </span>
 
-                <nav id="mySidenav" class="sidenav">
-                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <nav id="mySidenav" class="sidenav tablet-menu-block">
+                    <p class="closebtn" onclick="closeNav()">&times;</p>
                     <a href="#">Home</a>
                     <a href="#">Category</a>
                     <a href="#">About</a>
@@ -30,11 +31,11 @@
                 </nav>
             </div>
 
-            <div class="frame46">
+            <div class="box-search-join-nation tablet-menu" id="search-nation">
                 <div class="search">
-                    <form class="search-form">
-                        <button type="submit"><i class="fa fa-search"></i></button>
-                        <input id="pl" type="search" placeholder="Search something here!" name="search">
+                    <form class="search-form" action="#">
+                        <input type="search" placeholder="Search something here!" name="search" class="inp-search search-nth">
+                        <button type="submit" class="search-nth"><i class="fa fa-search"></i></button>
                     </form>
                 </div>
 
@@ -43,774 +44,978 @@
                 </div>
 
                 <div class="nation">
-                    <div class="choose-nation">
-                        <img src="./src/images/Vietnamese-Flag.svg" alt="Viet Nam Flag">
-                        <p>VND</p>
+                    <div class="nation__dropdown">
+                        <a href="#"> <img src="./src/images/svg/Vietnamese-Flag.svg" alt="Viet Nam Flag"> </a>
+
+                        <button type="button" onclick="myFunction()" class="button__dropdown">VND <span class="button--dropdown-btn"><i class="fa-solid fa-angle-down"></i></span> </button>
+
+                        <div id="myDropdown" class="dropdown-content">
+                            <a href="#">English</a>
+                            <a href="#">Vietnamese</a>
+                        </div>
                     </div>
-                    <span><button type="button" id="btn-dropdown"> <i class="fa-solid fa-angle-down"></i> </button></span>
                 </div>
             </div>
-        </section>
 
-        <section class="herro-banner">
-            <h2>Banner header</h2>
-            <div class="rectangle1"></div>
-            <div class="rectangle2"></div>
-            <div class="rectangle8"></div>
-            <div class="rectangle9"></div>
-            <div class="rectangle3"></div>
-            <div class="rectangle5"></div>
-            <div class="rectangle6"></div>
-            <div class="rectangle7"></div>
-            <div class="good-humored-woman-holds-dog-laughing">
-                <img src="./src/images/good-humored-woman-holds-dog-laughing-pink-background.png" alt="Woman Dog">
-            </div>
-            <div class="cont-banner">
-                <p id="contbann1">One more friend</p>
-                <p id="contbann2">Thousands more fun!</p>
-                <p id="contbann3">Having a pet means you have more joy, a new friend, a happy person who will always be with you to have fun. We have 200+ different pets that can meet your needs!
-                </p>
-            </div>
-            <div class="button-banner">
-                <button type="button" class="view-intro">View Intro <i class="fa-regular fa-circle-play"></i> </button>
-                <button type="button" class="explore-now">Explore Now</button>
-            </div>
-        </section>
+        </div>
     </header>
 
-    <main class="main">
+    <main>
+        <!-- Section Header Banner -->
+        <section class="section section-banner section-banner-header">
+            <div class="container container-banner container-banner-header" id="grid-tablet-banner-2-iteams">
+                <div class="content content-banner-header">
+                    <h1 class="content-banner-1">One more friend</h1>
+                    <p class="content-banner-2">Thousands more fun!</p>
+                    <p class="content-banner-3">Having a pet means you have more joy, a new friend, a happy person who will always be with you to have fun. We have 200+ different pets that can meet your needs!
+                    </p>
 
-        <!-- Frame 52 -->
+                    <div class="button button-banner button-banner-header">
+                        <!-- Turn on one video -->
+                        <button type="button" class="view-intro">View Intro
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M10 9V15L15 12L10 9Z" fill="#003459" stroke="#003459" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg> 
+                        </button>
 
-        <section class="frame52">
-            <h2>New Products</h2>
-            <section class="frame5">
-                <p class="frame5-1">Whats new?</p>
-                <p class="frame5-2">Take a look at some of our pets</p>
-            </section>
-
-            <section class="frame2">
-                <button type="button" class="view-more">View more<i class="fa-solid fa-angle-right"></i> </button>
-            </section>
-
-            <section class="product">
-                <div class="product-card">
-                    <div class="image-card">
-                        <img src="./src/images/image1.png" alt="Phốc sóc trắng">
-                    </div>
-
-                    <div class="product-title">
-                        <div class="content">
-                            <a href="#" class="name-product">MO231 - Pomeranian White</a>
-
-                            <div class="gene-age">
-                                <div class="gene">
-                                    <p class="gene-til">Gene:</p>
-                                    <p class="gene-da">Male</p>
-                                </div>
-
-                                <div class="dot-grey">
-                                    <div class="dot-dot-gr"></div>
-                                </div>
-
-                                <div class="age">
-                                    <p class="age-til">Age:</p>
-                                    <p class="age-da">2 months</p>
-                                </div>
-                            </div>
-
-                            <p class="price-product">6.900.000 VND</p>
-                        </div>
+                        <!-- Link to explore -->
+                        <a href="#" class="explore-now">Explore Now</a>
                     </div>
                 </div>
 
-                <div class="product-card">
-                    <div class="image-card">
-                        <img src="./src/images/image2.png" alt="Poodle Tiny Vàng">
-                    </div>
-
-                    <div class="product-title">
-                        <div class="content">
-                            <a href="#" class="name-product">MO502 - Poodle Tiny Yellow</a>
-
-                            <div class="gene-age">
-                                <div class="gene">
-                                    <p class="gene-til">Gene:</p>
-                                    <p class="gene-da">Female</p>
-                                </div>
-
-                                <div class="dot-grey">
-                                    <div class="dot-dot-gr"></div>
-                                </div>
-
-                                <div class="age">
-                                    <p class="age-til">Age:</p>
-                                    <p class="age-da">2 months</p>
-                                </div>
-                            </div>
-
-                            <p class="price-product">3.900.000 VND</p>
-                        </div>
-                    </div>
+                <div class="cubic-image-banner-header">
+                    <img src="./src/images/banner/header-banner-sm.png" alt="Woman Dog">
                 </div>
 
-                <div class="product-card">
-                    <div class="image-card">
-                        <img src="./src/images/image3.png" alt="Poodle tiny nâu đỏ">
-                    </div>
-
-                    <div class="product-title">
-                        <div class="content">
-                            <a href="#" class="name-product">MO102 - Poodle Tiny Sepia</a>
-
-                            <div class="gene-age">
-                                <div class="gene">
-                                    <p class="gene-til">Gene:</p>
-                                    <p class="gene-da">Male</p>
-                                </div>
-
-                                <div class="dot-grey">
-                                    <div class="dot-dot-gr"></div>
-                                </div>
-
-                                <div class="age">
-                                    <p class="age-til">Age:</p>
-                                    <p class="age-da">2 months</p>
-                                </div>
-                            </div>
-
-                            <p class="price-product">4.000.000 VND</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product-card">
-                    <div class="image-card">
-                        <img src="./src/images/image4.png" alt="Alaska Xám Trắng">
-                    </div>
-
-                    <div class="product-title">
-                        <div class="content">
-                            <a href="#" class="name-product">MO512 - Alaskan Malamute Grey</a>
-
-                            <div class="gene-age">
-                                <div class="gene">
-                                    <p class="gene-til">Gene:</p>
-                                    <p class="gene-da">Male</p>
-                                </div>
-
-                                <div class="dot-grey">
-                                    <div id="dot-dot-gr"></div>
-                                </div>
-
-                                <div class="age">
-                                    <p id="age-til">Age:</p>
-                                    <p id="age-da">2 months</p>
-                                </div>
-                            </div>
-
-                            <p class="price-product">8.900.000 VND</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product-card">
-                    <div class="image-card">
-                        <img src="./src/images/image5.png" alt="Pembroke Welsh Corgi Vàng Trắng">
-                    </div>
-
-                    <div class="product-title">
-                        <div class="content">
-                            <a href="#" class="name-product">MO231 - Pembroke Corgi Cream</a>
-
-                            <div class="gene-age">
-                                <div class="gene">
-                                    <p class="gene-til">Gene:</p>
-                                    <p class="gene-da">Male</p>
-                                </div>
-
-                                <div class="dot-grey">
-                                    <div class="dot-dot-gr"></div>
-                                </div>
-
-                                <div class="age">
-                                    <p class="age-til">Age:</p>
-                                    <p class="age-da">2 months</p>
-                                </div>
-                            </div>
-
-                            <p class="price-product">7.900.000 VND</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product-card">
-                    <div class="image-card">
-                        <img src="./src/images/image6.png" alt="Pembroke Welsh Corgi Tricolor">
-                    </div>
-
-                    <div class="product-title">
-                        <div class="content">
-                            <a href="#" class="name-product">MO502 - Pembroke Corgi Tricolor</a>
-
-                            <div class="gene-age">
-                                <div class="gene">
-                                    <p class="gene-til">Gene:</p>
-                                    <p class="gene-da">Female</p>
-                                </div>
-
-                                <div class="dot-grey">
-                                    <div class="dot-dot-gr"></div>
-                                </div>
-
-                                <div class="age">
-                                    <p class="age-til">Age:</p>
-                                    <p class="age-da">2 months</p>
-                                </div>
-                            </div>
-
-                            <p class="price-product">9.000.000 VND</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product-card">
-                    <div class="image-card">
-                        <img src="./src/images/image7.png" alt="Cún phốc sóc thuần chủng">
-                    </div>
-
-                    <div class="product-title">
-                        <div class="content">
-                            <a href="#" class="name-product">MO231 - Pomeranian White</a>
-
-                            <div class="gene-age">
-                                <div class="gene">
-                                    <p class="gene-til">Gene:</p>
-                                    <p class="gene-da">Female</p>
-                                </div>
-
-                                <div class="dot-grey">
-                                    <div class="dot-dot-gr"></div>
-                                </div>
-
-                                <div class="age">
-                                    <p class="age-til">Age:</p>
-                                    <p class="age-da">2 months</p>
-                                </div>
-                            </div>
-
-                            <p class="price-product">6.500.000 VND</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product-card">
-                    <div class="image-card">
-                        <img src="./src/images/image8.png" alt="Poodle tiny bò sữa">
-                    </div>
-
-                    <div class="product-title">
-                        <div class="content">
-                            <a href="#" class="name-product">MO512 - Poodle Tiny Dairy Cow</a>
-
-                            <div class="gene-age">
-                                <div class="gene">
-                                    <p class="gene-til">Gene:</p>
-                                    <p class="gene-da">Male</p>
-                                </div>
-
-                                <div class="dot-grey">
-                                    <div class="dot-dot-gr"></div>
-                                </div>
-
-                                <div class="age">
-                                    <p class="age-til">Age:</p>
-                                    <p class="age-da">2 months</p>
-                                </div>
-                            </div>
-
-                            <p class="price-product">5.000.000 VND</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </section>
-
-        <!-- Banner 1nd main -->
-
-        <section class="banner-1nd-main">
-            <h2>Banner main</h2>
-            <div class="rectangle10"></div>
-            <div class="rectangle11"></div>
-            <div class="shot-adult-girl-jeans">
-                <img src="./src/images/horizontal-shot-adult-girl-jeans-overalls-kissing-cute-puppy.png" alt="Girl and Puppy">
-            </div>
-
-            <div class="text-bann-main">
-                <p id="one-more">One more friend</p>
-                <p id="thousands">Thousands more fun!</p>
-                <p id="having">Having a pet means you have more joy, a new friend, a happy person who will always be with you to have fun. We have 200+ different pets that can meet your needs!</p>
-            </div>
-
-            <div class="btn-bann-1nd-main">
-                <button type="button" class="view-intro">View Intro <i class="fa-regular fa-circle-play"></i> </button>
-                <button type="button" class="explore-now">Explore Now</button>
             </div>
         </section>
 
-        <!-- Frame53 -->
-
-        <section class="frame53">
-            <h2>Our product</h2>
-            <div class="frame5">
-                <p class="frame5-1">Hard to choose right products for your pets?</p>
-                <p class="frame5-2">Our Products</p>
-            </div>
-
-            <div class="frame3">
-                <button type="button" class="view-more">View more<i class="fa-solid fa-angle-right"></i> </button>
-            </div>
-
-            <div class="product">
-                <div class="product-card">
-                    <div class="image-card">
-                        <img src="./src/images/image9.png" alt="Zealandia Salmon Pate Wet Dog Food">
+        <!-- Card New Product List -->
+        <section class="section margin-block-large section-card-product-list">
+            <div class="container container-product-list">
+                <div class="section-header">
+                    <div class="section-heading">
+                        <span class="subheading">
+                            Whats new?
+                        </span>
+                        <h2 class="heading">Take a look at some of our pets</h2>
                     </div>
 
-                    <div class="product-title">
-                        <div class="content">
-                            <a href="#" class="name-product">Reflex Plus Adult Cat Food Salmon</a>
-
-                            <div class="gene-age">
-                                <div class="gene">
-                                    <p class="gene-til">Product:</p>
-                                    <p class="gene-da">Dog Food</p>
-                                </div>
-
-                                <div class="dot-grey">
-                                    <div class="dot-dot-gr"></div>
-                                </div>
-
-                                <div class="age">
-                                    <p class="age-til">Size:</p>
-                                    <p class="age-da">385gm</p>
-                                </div>
-                            </div>
-
-                            <p class="price-product">140.000 VND</p>
-                        </div>
-
-                        <div class="product-gift">
-                            <img src="./src/images/Gift.svg" alt="gift icon">
-                            <div class="dot-blue">
-                                <div class="dot-dot-bl"></div>
-                            </div>
-                            <p class="cont-gift">Free Toy & Free Shaker</p>
-                        </div>
+                    <div class="section-header__view-more section-header__view-more-desktop">
+                        <a class="button button-view-more" href="#">
+                            <span>View more</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                    <path d="M8.33398 6.66669L11.6673 10L8.33398 13.3334" stroke="#003459" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                            </svg>
+                        </a>
                     </div>
                 </div>
 
-                <div class="product-card">
-                    <div class="image-card">
-                        <img src="./src/images/image10.png" alt="gift icon">
-                    </div>
-
-                    <div class="product-title">
-                        <div class="content">
-                            <a href="#" class="name-product">Reflex Plus Adult Cat Food Salmon</a>
-
-                            <div class="gene-age">
-                                <div class="gene">
-                                    <p class="gene-til">Product:</p>
-                                    <p class="gene-da">Cat Food</p>
+                <div class="section-card ">
+                    <div class="grid grid-desktop-4-items grid-tablet-4-items grid-mobile-4-items">
+                        <div class="grid__item">
+                            <div class="card card-product">
+                                <div class="card__media">
+                                    <img src="./src/images/new-products/image1.png" alt="Phốc sóc trắng">
                                 </div>
 
-                                <div class="dot-grey">
-                                    <div class="dot-dot-gr"></div>
-                                </div>
+                                <div class="card-body card-body-product">
+                                    <h3 class="card-heading card-product-list-heading">
+                                        <a class="card-title" href="#">MO231 - Pomeranian White</a>
+                                    </h3>
 
-                                <div class="age">
-                                    <p class="age-til">Size:</p>
-                                    <p class="age-da">1.5kg</p>
+                                    <div class="product-info">
+                                        <div class="product-info-title">
+                                            <span class="pro-font-light">Gene:</span>
+                                            <span class="product-info-title-bold">Male</span>
+                                        </div>
+
+                                        <div class="dot-grey">
+                                            <div class="dot-dot-gr"></div>
+                                        </div>
+
+                                        <div class="product-info-attribute">
+                                            <span class="pro-font-light">Age:</span>
+                                            <span class="product-info-att-bold">02 months</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="product-price">
+                                        6.900.000 VND
+                                    </div>
                                 </div>
                             </div>
-
-                            <p class="price-product">165.000 VND</p>
                         </div>
 
-                        <div class="product-gift">
-                            <img src="./src/images/Gift.svg" alt="gift icon">
-                            <div class="dot-blue">
-                                <div class="dot-dot-bl"></div>
+                        <div class="grid__item">
+                            <div class="card card-product">
+                                <div class="card__media">
+                                    <img class="card__image" src="./src/images/new-products/image2.png" alt="Phốc sóc trắng">
+                                </div>
+
+                                <div class="card-body card-body-product">
+                                    <h3 class="card-heading card-product-list-heading">
+                                        <a class="card-title" href="#">MO231 - Pomeranian White</a>
+                                    </h3>
+
+
+                                    <div class="product-info">
+                                        <div class="product-info-title">
+                                            <span class="pro-font-light">Gene:</span>
+                                            <span class="product-info-title-bold">Male</span>
+                                        </div>
+
+                                        <div class="dot-grey">
+                                            <div class="dot-dot-gr"></div>
+                                        </div>
+
+                                        <div class="product-info-attribute">
+                                            <span class="pro-font-light">Age:</span>
+                                            <span class="product-info-att-bold">02 months</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="product-price">
+                                        6.900.000 VND
+                                    </div>
+                                </div>
                             </div>
-                            <p class="cont-gift">Free Toy & Free Shaker</p>
+                        </div>
+
+                        <div class="grid__item">
+                            <div class="card card-product">
+                                <div class="card__media">
+                                    <img class="card__image" src="./src/images/new-products/image3.png" alt="Phốc sóc trắng">
+                                </div>
+
+                                <div class="card-body card-body-product">
+                                    <h3 class="card-heading card-product-list-heading">
+                                        <a class="card-title" href="#">MO231 - Pomeranian White</a>
+                                    </h3>
+
+                                    <div class="product-info">
+                                        <div class="product-info-title">
+                                            <span class="pro-font-light">Gene:</span>
+                                            <span class="product-info-title-bold">Male</span>
+                                        </div>
+
+                                        <div class="dot-grey">
+                                            <div class="dot-dot-gr"></div>
+                                        </div>
+
+                                        <div class="product-info-attribute">
+                                            <span class="pro-font-light">Age:</span>
+                                            <span class="product-info-att-bold">02 months</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="product-price">
+                                        6.900.000 VND
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="grid__item">
+                            <div class="card card-product">
+                                <div class="card__media">
+                                    <img class="card__image" src="./src/images/new-products/image4.png" alt="Phốc sóc trắng">
+                                </div>
+
+                                <div class="card-body card-body-product">
+                                    <h3 class="card-heading card-product-list-heading">
+                                        <a class="card-title" href="#">MO231 - Pomeranian White</a>
+                                    </h3>
+
+                                    <div class="product-info">
+                                        <div class="product-info-title">
+                                            <span class="pro-font-light">Gene:</span>
+                                            <span class="product-info-title-bold">Male</span>
+                                        </div>
+
+                                        <div class="dot-grey">
+                                            <div class="dot-dot-gr"></div>
+                                        </div>
+
+                                        <div class="product-info-attribute">
+                                            <span class="pro-font-light">Age:</span>
+                                            <span class="product-info-att-bold">02 months</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="product-price">
+                                        6.900.000 VND
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="grid__item">
+                            <div class="card card-product">
+                                <div class="card__media">
+                                    <img src="./src/images/new-products/image5.png" alt="Phốc sóc trắng">
+                                </div>
+
+                                <div class="card-body card-body-product">
+                                    <h3 class="card-heading card-product-list-heading">
+                                        <a class="card-title" href="#">MO231 - Pomeranian White</a>
+                                    </h3>
+
+                                    <div class="product-info">
+                                        <div class="product-info-title">
+                                            <span class="pro-font-light">Gene:</span>
+                                            <span class="product-info-title-bold">Male</span>
+                                        </div>
+
+                                        <div class="dot-grey">
+                                            <div class="dot-dot-gr"></div>
+                                        </div>
+
+                                        <div class="product-info-attribute">
+                                            <span class="pro-font-light">Age:</span>
+                                            <span class="product-info-att-bold">02 months</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="product-price">
+                                        6.900.000 VND
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="grid__item">
+                            <div class="card card-product">
+                                <div class="card__media">
+                                    <img src="./src/images/new-products/image6.png" alt="Phốc sóc trắng">
+                                </div>
+
+                                <div class="card-body card-body-product">
+                                    <h3 class="card-heading card-product-list-heading">
+                                        <a class="card-title" href="#">MO231 - Pomeranian White</a>
+                                    </h3>
+
+                                    <div class="product-info">
+                                        <div class="product-info-title">
+                                            <span class="pro-font-light">Gene:</span>
+                                            <span class="product-info-title-bold">Male</span>
+                                        </div>
+
+                                        <div class="dot-grey">
+                                            <div class="dot-dot-gr"></div>
+                                        </div>
+
+                                        <div class="product-info-attribute">
+                                            <span class="pro-font-light">Age:</span>
+                                            <span class="product-info-att-bold">02 months</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="product-price">
+                                        6.900.000 VND
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="grid__item">
+                            <div class="card card-product">
+                                <div class="card__media">
+                                    <img src="./src/images/new-products/image7.png" alt="Phốc sóc trắng">
+                                </div>
+
+                                <div class="card-body card-body-product">
+                                    <h3 class="card-heading card-product-list-heading">
+                                        <a class="card-title" href="#">MO231 - Pomeranian White</a>
+                                    </h3>
+
+                                    <div class="product-info">
+                                        <div class="product-info-title">
+                                            <span class="pro-font-light">Gene:</span>
+                                            <span class="product-info-title-bold">Male</span>
+                                        </div>
+
+                                        <div class="dot-grey">
+                                            <div class="dot-dot-gr"></div>
+                                        </div>
+
+                                        <div class="product-info-attribute">
+                                            <span class="pro-font-light">Age:</span>
+                                            <span class="product-info-att-bold">02 months</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="product-price">
+                                        6.900.000 VND
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="grid__item">
+                            <div class="card card-product">
+                                <div class="card__media">
+                                    <img src="./src/images/new-products/image8.png" alt="Phốc sóc trắng">
+                                </div>
+
+                                <div class="card-body card-body-product">
+                                    <h3 class="card-heading card-product-list-heading">
+                                        <a class="card-title" href="#">MO231 - Pomeranian White</a>
+                                    </h3>
+
+                                    <div class="product-info">
+                                        <div class="product-info-title">
+                                            <span class="pro-font-light">Gene:</span>
+                                            <span class="product-info-title-bold">Male</span>
+                                        </div>
+
+                                        <div class="dot-grey">
+                                            <div class="dot-dot-gr"></div>
+                                        </div>
+
+                                        <div class="product-info-attribute">
+                                            <span class="pro-font-light">Age:</span>
+                                            <span class="product-info-att-bold">02 months</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="product-price">
+                                        6.900.000 VND
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
+
                 </div>
 
-                <div class="product-card">
-                    <div class="image-card">
-                        <img src="./src/images/image11.png" alt="gift icon">
-                    </div>
-
-                    <div class="product-title">
-                        <div class="content">
-                            <a href="#" class="name-product">Cat scratching ball toy kitten sisal rope ball</a>
-
-                            <div class="gene-age">
-                                <div class="gene">
-                                    <p class="gene-til">Product:</p>
-                                    <p class="gene-da">Toy</p>
-                                </div>
-                            </div>
-
-                            <p class="price-product">1.100.000 VND</p>
-                        </div>
-
-                        <div class="product-gift">
-                            <img src="./src/images/Gift.svg" alt="gift icon">
-                            <div class="dot-blue">
-                                <div id="dot-dot-bl"></div>
-                            </div>
-                            <p class="cont-gift">Free Toy & Free Shaker</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product-card">
-                    <div class="image-card">
-                        <img src="./src/images/image12.png" alt="Nệm nằm cho mèo cá voi xám vải lông">
-                    </div>
-
-                    <div class="product-title">
-                        <div class="content">
-                            <a href="#" class="name-product">Cute Pet Cat Warm Nest</a>
-
-                            <div class="gene-age">
-                                <div class="gene">
-                                    <p class="gene-til">Product:</p>
-                                    <p class="gene-da">Toy</p>
-                                </div>
-                            </div>
-
-                            <p class="price-product">410.000 VND</p>
-                        </div>
-
-                        <div class="product-gift">
-                            <img src="./src/images/Gift.svg" alt="gift icon">
-                            <div class="dot-blue">
-                                <div class="dot-dot-bl"></div>
-                            </div>
-                            <p class="cont-gift">Free Toy & Free Shaker</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product-card">
-                    <div class="image-card">
-                        <img src="./src/images/image13.png" alt="Neturvet Omega3">
-                    </div>
-
-                    <div class="product-title">
-                        <div class="content">
-                            <a href="#" class="name-product">NaturVet Dogs - Omega-Gold Plus Salmon Oil</a>
-
-                            <div class="gene-age">
-                                <div class="gene">
-                                    <p class="gene-til">Product:</p>
-                                    <p class="gene-da">Dog Food</p>
-                                </div>
-
-                                <div class="dot-grey">
-                                    <div class="dot-dot-gr"></div>
-                                </div>
-
-                                <div class="age">
-                                    <p class="age-til">Size:</p>
-                                    <p class="age-da">385gm</p>
-                                </div>
-                            </div>
-
-                            <p class="price-product">350.000 VND</p>
-                        </div>
-
-                        <div class="product-gift">
-                            <img src="./src/images/Gift.svg" alt="gift icon">
-                            <div class="dot-blue">
-                                <div class="dot-dot-bl"></div>
-                            </div>
-                            <p class="cont-gift">Free Toy & Free Shaker</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product-card">
-                    <div class="image-card">
-                        <img src="./src/images/image14.png" alt="Trang phục cao bồi cưỡi ngựa cho cún con">
-                    </div>
-
-                    <div class="product-title">
-                        <div class="content">
-                            <a href="#" class="name-product">Costumes Fashion Pet Clother Cowboy Rider</a>
-
-                            <div class="gene-age">
-                                <div class="gene">
-                                    <p class="gene-til">Size:</p>
-                                    <p class="gene-da">Costume</p>
-                                </div>
-
-                                <div class="dot-grey">
-                                    <div class="dot-dot-gr"></div>
-                                </div>
-
-                                <div class="age">
-                                    <p class="age-til">Age:</p>
-                                    <p class="age-da">1.5kg</p>
-                                </div>
-                            </div>
-
-                            <p class="price-product">500.000 VND</p>
-                        </div>
-
-                        <div class="product-gift">
-                            <img src="./src/images/Gift.svg" alt="gift icon">
-                            <div class="dot-blue">
-                                <div class="dot-dot-bl"></div>
-                            </div>
-                            <p class="cont-gift">Free Toy & Free Shaker</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product-card">
-                    <div class="image-card">
-                        <img src="./src/images/image15.png" alt="Bờm tóc đùi gà cho thú cưng">
-                    </div>
-
-                    <div class="product-title">
-                        <div class="content">
-                            <a href="#" class="name-product">Costumes Chicken Drumsti ck Headband</a>
-
-                            <div class="gene-age">
-                                <div class="gene">
-                                    <p class="gene-til">Product:</p>
-                                    <p class="gene-da">Costume</p>
-                                </div>
-                            </div>
-
-                            <p class="price-product">400.000 VND</p>
-                        </div>
-
-                        <div class="product-gift">
-                            <img src="./src/images/Gift.svg" alt="gift icon">
-                            <div class="dot-blue">
-                                <div class="dot-dot-bl"></div>
-                            </div>
-                            <p class="cont-gift">Free Toy & Free Shaker</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product-card">
-                    <div class="image-card">
-                        <img src="./src/images/image16.png" alt="Thú nhồi bông bạch tuộc hồng">
-                    </div>
-
-                    <div class="product-title">
-                        <div class="content">
-                            <a href="#" class="name-product">Plush Pet Toy</a>
-
-                            <div class="gene-age">
-                                <div class="gene">
-                                    <p class="gene-til">Product:</p>
-                                    <p class="gene-da">Toy</p>
-                                </div>
-                            </div>
-
-                            <p class="price-product">250.000 VND</p>
-                        </div>
-
-                        <div class="product-gift">
-                            <img src="./src/images/Gift.svg" alt="gift icon">
-                            <div class="dot-blue">
-                                <div class="dot-dot-bl"></div>
-                            </div>
-                            <p class="cont-gift">Free Toy & Free Shaker</p>
-                        </div>
-                    </div>
+                <!-- button--view-more-mobile -->
+                <div class="section-header__view-more section-header__view-more-mobile">
+                    <a class="button button-view-more" href="#">
+                        <span>View more</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M8.33398 6.66669L11.6673 10L8.33398 13.3334" stroke="#003459" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                        </svg>
+                    </a>
                 </div>
             </div>
         </section>
 
-        <!-- Frame 42 -->
-
-        <section class="frame42">
-            <h2>Sellers</h2>
-            <div class="frame43">
-                <div class="pround-pet">
-                    <p id="pround">Proud to be part of</p>
-                    <p id="pet">Pet Sellers</p>
+        <!-- Section Banner Main-->
+        <section class="section section-banner">
+            <div class="container container-banner container-banner-main banner-main-bg-1">
+                <div class="cubic-image-banner-main">
+                    <img class="image-bann-main-1" src="./src/images/banner/main-banner-sm.png" alt="Girl and Puppy">
                 </div>
 
-                <button type="button" class="btn-fr42">View all our sellers <i class="fa-solid fa-angle-right"></i></button>
-            </div>
+                <div class="content content-banner-main content-banner-main-1">
+                    <h1 class="content-banner-1 cont-bann-1">One more friend</h1>
+                    <p class="content-banner-2 cont-bann-2">Thousands more fun!</p>
+                    <p class="content-banner-3 cont-bann-3">Having a pet means you have more joy, a new friend, a happy person who will always be with you to have fun. We have 200+ different pets that can meet your needs!
+                    </p>
 
-            <div class="frame40">
-                <img id="fr40-img1" src="./src/images/image17.png" alt="Seba Cat Food">
-                <img id="fr40-img2" src="./src/images/image18.png" alt="Whiskas Adult Chicken">
-                <img id="fr40-img3" src="./src/images/image19.png" alt="Bakers Dog Food">
-                <img id="fr40-img4" src="./src/images/image20.png" alt="Thức ăn Felix cho mèo">
-                <img id="fr40-img5" src="./src/images/image21.png" alt="Good Boy Pet Care">
-                <img id="fr40-img6" src="./src/images/image22.png" alt="Butcher's Nourishing Food For Dog Cat">
-                <img id="fr40-img7" src="./src/images/image23.png" alt="Petnus Vietnam">
-            </div>
-        </section>
+                    <div class="button button-banner button-banner-main-1">
+                        <!-- Turn on one video -->
+                        <button type="button" class="view-intro">View Intro
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M10 9V15L15 12L10 9Z" fill="#003459" stroke="#003459" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg> 
+                        </button>
 
-        <!-- Banner-2-Main -->
+                        <!-- Link to explore -->
+                        <a href="#" class="explore-now">Explore Now</a>
+                    </div>
+                </div>
 
-        <section class="banner-2nd-main">
-            <h2>Banner 2nd main</h2>
-            <div class="rectangle12"></div>
-            <div class="rectangle13"></div>
-            <img id="handshake-the-dog" src="./src/images/image24.png" alt="Puppy hand">
-            <img id="puppy-hand" src="./src/images/puppy-hand.svg" alt="Puppy hand icon">
-            <div class="text-bann-2nd-main">
-                <p id="txt1">Adoption</p>
-                <p id="txt2">We need help. so do they.</p>
-                <p id="txt3">Adopt a pet and give it a home, <br>it will be love you back unconditionally.</p>
-            </div>
-            <div class="btn-bann-2nd-main">
-                <button type="button" class="explore-now">Explore Now</button>
-                <button type="button" class="view-intro">View Intro <i class="fa-regular fa-circle-play"></i> </button>
             </div>
         </section>
 
-        <!-- Frame 56 -->
-
-        <section class="frame56">
-            <h2>Knowledge</h2>
-            <section class="knowledge">
-                <p id="you-alr">You already know ?</p>
-                <p id="useful">Useful pet knowledge</p>
-            </section>
-
-            <section class="btn-knowledge">
-                <button type="button" class="view-more">View more<i class="fa-solid fa-angle-right"></i> </button>
-            </section>
-
-
-            <section class="cont-knowledge">
-                <div class="card-blog">
-                    <div class="image-card-blog">
-                        <img src="./src/images/image25.png" alt="Phốc sóc giống cún bắc kinh">
+        <!-- Card Our-Product -->
+        <section class="section margin-block-large section-our-products">
+            <div class="container container-our-products">
+                <div class="section-header">
+                    <div class="section-heading">
+                        <span class="subheading">
+                            Whats new?
+                        </span>
+                        <h2 class="heading">Take a look at some of our pets</h2>
                     </div>
 
-                    <div class="frame-blog">
-                        <div class="content-blog">
-                            <div class="status">
-                                <p>Pet knowledge</p>
-                            </div>
-                            <a class="name-blog">What is a Pomeranian? How to Identify Pomeranian Dogs</a>
-                            <p class="cont-blog">The Pomeranian, also known as the Pomeranian (Pom dog), is always in the top of the cutest pets. Not only that, the small, lovely, smart, friendly, and skillful circus dog breed.</p>
-                        </div>
+                    <div class="section-header__view-more">
+                        <a class="button button-view-more" href="#">
+                            <span>View more</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M8.33398 6.66669L11.6673 10L8.33398 13.3334" stroke="#003459" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </a>
                     </div>
                 </div>
 
-                <div class="card-blog">
-                    <div class="image-card-blog">
-                        <img src="./src/images/image26.png" alt="Samoyed trắng lông xù">
-                    </div>
+                <div class="section-card">
+                    <div class="grid grid-desktop-4-items grid-tablet-4-items grid-mobile-4-items">
+                        <div class="grid__item">
+                            <div class="card card-product">
+                                <div class="card__media">
+                                    <img src="./src/images/our-products/image9.png" alt="Zealandia Salmon Pate Wet Dog Food">
+                                </div>
 
-                    <div class="frame-blog">
-                        <div class="content-blog">
-                            <div class="status">
-                                <p>Pet knowledge</p>
+                                <div class="card-body card-body-product">
+                                    <h3 class="card-heading card-our-product-heading">
+                                        <a class="card-title" href="#">Reflex Plus Adult Cat Food Salmon</a>
+                                    </h3>
+
+                                    <div class="product-info">
+                                        <div class="product-info-title">
+                                            <span class="pro-font-light">Product:</span>
+                                            <span class="product-info-title-bold">Dog Food</span>
+                                        </div>
+
+                                        <div class="dot-grey">
+                                            <div class="dot-dot-gr"></div>
+                                        </div>
+
+                                        <div class="product-info-attribute">
+                                            <span class="pro-font-light">Size:</span>
+                                            <span class="product-info-att-bold">385gm</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="product-price">
+                                        6.900.000 VND
+                                    </div>
+
+                                    <div class="product-gift">
+                                        <img src="./src/images/svg/Gift.svg" alt="gift icon">
+                                        <div class="dot-blue">
+                                            <div class="dot-dot-bl"></div>
+                                        </div>
+                                        <p class="cont-gift">Free Toy & Free Shaker</p>
+                                    </div>
+                                </div>
                             </div>
-                            <a class="name-blog">Dog Diet You Need To Know</a>
-                            <p class="cont-blog">Dividing a dog's diet may seem simple at first, but there are some rules you should know so that your dog can easily absorb the nutrients in the diet. For those who are just starting to raise dogs, especially newborn puppies
-                                with relatively weak resistance.</p>
                         </div>
-                    </div>
-                </div>
 
-                <div class="card-blog">
-                    <div class="image-card-blog">
-                        <img src="./src/images/image27.png" alt="Doggy man">
-                    </div>
+                        <div class="grid__item">
+                            <div class="card card-product">
+                                <div class="card__media">
+                                    <img src="./src/images/our-products/image10.png" alt="gift icon">
+                                </div>
 
-                    <div class="frame-blog">
-                        <div class="content-blog">
-                            <div class="status">
-                                <p>Pet knowledge</p>
+                                <div class="card-body card-body-product">
+                                    <h3 class="card-heading card-our-product-heading">
+                                        <a class="card-title" href="#">Reflex Plus Adult Cat Food Salmon</a>
+                                    </h3>
+
+                                    <div class="product-info">
+                                        <div class="product-info-title">
+                                            <span class="pro-font-light">Product:</span>
+                                            <span class="product-info-title-bold">Dog Food</span>
+                                        </div>
+
+                                        <div class="dot-grey">
+                                            <div class="dot-dot-gr"></div>
+                                        </div>
+
+                                        <div class="product-info-attribute">
+                                            <span class="pro-font-light">Size:</span>
+                                            <span class="product-info-att-bold">385gm</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="product-price">
+                                        6.900.000 VND
+                                    </div>
+
+                                    <div class="product-gift">
+                                        <img src="./src/images/svg/Gift.svg" alt="gift icon">
+                                        <div class="dot-blue">
+                                            <div class="dot-dot-bl"></div>
+                                        </div>
+                                        <p class="cont-gift">Free Toy & Free Shaker</p>
+                                    </div>
+                                </div>
                             </div>
-                            <a class="name-blog">Why Dogs Bite and Destroy Furniture and How to Prevent It Effectively</a>
-                            <p class="cont-blog">Dog bites are common during development. However, no one wants to see their furniture or important items being bitten by a dog.</p>
                         </div>
+
+                        <div class="grid__item">
+                            <div class="card card-product">
+                                <div class="card__media">
+                                    <img src="./src/images/our-products/image11.png" alt="gift icon">
+                                </div>
+
+                                <div class="card-body card-body-product">
+                                    <h3 class="card-heading card-our-product-heading">
+                                        <a class="card-title" href="#">Reflex Plus Adult Cat Food Salmon</a>
+                                    </h3>
+
+                                    <div class="product-info">
+                                        <div class="product-info-title">
+                                            <span class="pro-font-light">Product:</span>
+                                            <span class="product-info-title-bold">Dog Food</span>
+                                        </div>
+
+                                        <div class="dot-grey">
+                                            <div class="dot-dot-gr"></div>
+                                        </div>
+
+                                        <div class="product-info-attribute">
+                                            <span class="pro-font-light">Size:</span>
+                                            <span class="product-info-att-bold">385gm</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="product-price">
+                                        6.900.000 VND
+                                    </div>
+
+                                    <div class="product-gift">
+                                        <img src="./src/images/svg/Gift.svg" alt="gift icon">
+                                        <div class="dot-blue">
+                                            <div class="dot-dot-bl"></div>
+                                        </div>
+                                        <p class="cont-gift">Free Toy & Free Shaker</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="grid__item">
+                            <div class="card card-product">
+                                <div class="card__media">
+                                    <img src="./src/images/our-products/image12.png" alt="Nệm nằm cho mèo cá voi xám vải lông">
+                                </div>
+
+                                <div class="card-body card-body-product">
+                                    <h3 class="card-heading card-our-product-heading">
+                                        <a class="card-title" href="#">Reflex Plus Adult Cat Food Salmon</a>
+                                    </h3>
+
+                                    <div class="product-info">
+                                        <div class="product-info-title">
+                                            <span class="pro-font-light">Product:</span>
+                                            <span class="product-info-title-bold">Dog Food</span>
+                                        </div>
+
+                                        <div class="dot-grey">
+                                            <div class="dot-dot-gr"></div>
+                                        </div>
+
+                                        <div class="product-info-attribute">
+                                            <span class="pro-font-light">Size:</span>
+                                            <span class="product-info-att-bold">385gm</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="product-price">
+                                        6.900.000 VND
+                                    </div>
+
+                                    <div class="product-gift">
+                                        <img src="./src/images/svg/Gift.svg" alt="gift icon">
+                                        <div class="dot-blue">
+                                            <div class="dot-dot-bl"></div>
+                                        </div>
+                                        <p class="cont-gift">Free Toy & Free Shaker</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="grid__item">
+                            <div class="card card-product">
+                                <div class="card__media">
+                                    <img src="./src/images/our-products/image13.png" alt="Neturvet Omega3">
+                                </div>
+
+                                <div class="card-body card-body-product">
+                                    <h3 class="card-heading card-our-product-heading">
+                                        <a class="card-title" href="#">Reflex Plus Adult Cat Food Salmon</a>
+                                    </h3>
+
+                                    <div class="product-info">
+                                        <div class="product-info-title">
+                                            <span class="pro-font-light">Product:</span>
+                                            <span class="product-info-title-bold">Dog Food</span>
+                                        </div>
+
+                                        <div class="dot-grey">
+                                            <div class="dot-dot-gr"></div>
+                                        </div>
+
+                                        <div class="product-info-attribute">
+                                            <span class="pro-font-light">Size:</span>
+                                            <span class="product-info-att-bold">385gm</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="product-price">
+                                        6.900.000 VND
+                                    </div>
+
+                                    <div class="product-gift">
+                                        <img src="./src/images/svg/Gift.svg" alt="gift icon">
+                                        <div class="dot-blue">
+                                            <div class="dot-dot-bl"></div>
+                                        </div>
+                                        <p class="cont-gift">Free Toy & Free Shaker</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="grid__item">
+                            <div class="card card-product">
+                                <div class="card__media">
+                                    <img src="./src/images/our-products/image14.png" alt="Trang phục cao bồi cưỡi ngựa cho cún con">
+                                </div>
+
+                                <div class="card-body card-body-product">
+                                    <h3 class="card-heading card-our-product-heading">
+                                        <a class="card-title" href="#">Reflex Plus Adult Cat Food Salmon</a>
+                                    </h3>
+
+                                    <div class="product-info">
+                                        <div class="product-info-title">
+                                            <span class="pro-font-light">Product:</span>
+                                            <span class="product-info-title-bold">Dog Food</span>
+                                        </div>
+
+                                        <div class="dot-grey">
+                                            <div class="dot-dot-gr"></div>
+                                        </div>
+
+                                        <div class="product-info-attribute">
+                                            <span class="pro-font-light">Size:</span>
+                                            <span class="product-info-att-bold">385gm</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="product-price">
+                                        6.900.000 VND
+                                    </div>
+
+                                    <div class="product-gift">
+                                        <img src="./src/images/svg/Gift.svg" alt="gift icon">
+                                        <div class="dot-blue">
+                                            <div class="dot-dot-bl"></div>
+                                        </div>
+                                        <p class="cont-gift">Free Toy & Free Shaker</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="grid__item">
+                            <div class="card card-product">
+                                <div class="card__media">
+                                    <img src="./src/images/our-products/image15.png" alt="Bờm tóc đùi gà cho thú cưng">
+                                </div>
+
+                                <div class="card-body card-body-product">
+                                    <h3 class="card-heading card-our-product-heading">
+                                        <a class="card-title" href="#">Reflex Plus Adult Cat Food Salmon</a>
+                                    </h3>
+
+                                    <div class="product-info">
+                                        <div class="product-info-title">
+                                            <span class="pro-font-light">Product:</span>
+                                            <span class="product-info-title-bold">Dog Food</span>
+                                        </div>
+
+                                        <div class="dot-grey">
+                                            <div class="dot-dot-gr"></div>
+                                        </div>
+
+                                        <div class="product-info-attribute">
+                                            <span class="pro-font-light">Size:</span>
+                                            <span class="product-info-att-bold">385gm</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="product-price">
+                                        6.900.000 VND
+                                    </div>
+
+                                    <div class="product-gift">
+                                        <img src="./src/images/svg/Gift.svg" alt="gift icon">
+                                        <div class="dot-blue">
+                                            <div class="dot-dot-bl"></div>
+                                        </div>
+                                        <p class="cont-gift">Free Toy & Free Shaker</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="grid__item">
+                            <div class="card card-product">
+                                <div class="card__media">
+                                    <img src="./src/images/our-products/image16.png" alt="Thú nhồi bông bạch tuộc hồng">
+                                </div>
+
+                                <div class="card-body card-body-product">
+                                    <h3 class="card-heading card-our-product-heading">
+                                        <a class="card-title" href="#">Reflex Plus Adult Cat Food Salmon</a>
+                                    </h3>
+
+                                    <div class="product-info">
+                                        <div class="product-info-title">
+                                            <span class="pro-font-light">Product:</span>
+                                            <span class="product-info-title-bold">Dog Food</span>
+                                        </div>
+
+                                        <div class="dot-grey">
+                                            <div class="dot-dot-gr"></div>
+                                        </div>
+
+                                        <div class="product-info-attribute">
+                                            <span class="pro-font-light">Size:</span>
+                                            <span class="product-info-att-bold">385gm</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="product-price">
+                                        6.900.000 VND
+                                    </div>
+
+                                    <div class="product-gift">
+                                        <img src="./src/images/svg/Gift.svg" alt="gift icon">
+                                        <div class="dot-blue">
+                                            <div class="dot-dot-bl"></div>
+                                        </div>
+                                        <p class="cont-gift">Free Toy & Free Shaker</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
+
                 </div>
-
-            </section>
-
+            </div>
         </section>
 
+        <!-- Pet Seller -->
+        <section class="section section-pet-seller">
+            <div class="container container-pet-seller">
+                <div class="section-header">
+                    <div class="section-heading-pet-seller">
+                        <span class="subheading">
+                            Proud to be part of
+                        </span>
+                        <h2 class="heading">Pet Sellers</h2>
+                    </div>
+
+                    <div class="section-header__view-more">
+                        <a class="button button-view-more" href="#">
+                            <span>View more</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M8.33398 6.66669L11.6673 10L8.33398 13.3334" stroke="#003459" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="section-brand">
+                    <img class="image-brand-1" src="./src/images/pet-sellers-brand/image17.png" alt="Seba Cat Food">
+                    <img class="image-brand-2" src="./src/images/pet-sellers-brand/image18.png" alt="Whiskas Adult Chicken">
+                    <img class="image-brand-3" src="./src/images/pet-sellers-brand/image19.png" alt="Bakers Dog Food">
+                    <img class="image-brand-4" src="./src/images/pet-sellers-brand/image20.png" alt="Thức ăn Felix cho mèo">
+                    <img class="image-brand-5" src="./src/images/pet-sellers-brand/image21.png" alt="Good Boy Pet Care">
+                    <img class="image-brand-6" src="./src/images/pet-sellers-brand/image22.png" alt="Butcher's Nourishing Food For Dog Cat">
+                    <img class="image-brand-7" src="./src/images/pet-sellers-brand/image23.png" alt="Petnus Vietnam">
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Banner Main 2 -->
+        <section class="section section-banner section-banner-main-2">
+            <div class="container container-banner container-banner-main banner-main-bg-2">
+                <div class="content content-banner-main content-banner-main-2">
+                    <div class="heading-cont-bann-main">
+                        <h1 class="content-banner-1 cont-bann-1">Adoption</h1>
+                        <img class="puppy-hand" src="./src/images/svg/puppy-hand.svg" alt="Puppy hand icon">
+                    </div>
+                    <p class="content-banner-2 cont-bann-2">We need help. so do they.</p>
+                    <p class="content-banner-3 cont-bann-3">Adopt a pet and give it a home, it will be love you back unconditionally.
+                    </p>
+
+                    <div class="button button-banner button-banner-main-2">
+                        <!-- Link to explore -->
+                        <a href="#" class="explore-now">Explore Now</a>
+
+                        <!-- Turn on one video -->
+                        <button type="button" class="view-intro">View Intro
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M10 9V15L15 12L10 9Z" fill="#003459" stroke="#003459" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg> 
+                        </button>
+                    </div>
+                </div>
+
+                <div class="cubic-image-banner-main">
+                    <img class="image-bann-main-2" src="./src/images/banner/main-banner-2-sm.png" alt="Puppy hand">
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Card Blog List -->
+        <section class="section margin-block-large section-blog-post-list">
+            <div class="container container-blog-post-list">
+                <div class="section-header">
+                    <div class="section-heading">
+                        <span class="subheading">
+                            You already know ?
+                        </span>
+                        <h2 class="heading">Useful pet knowledge</h2>
+                    </div>
+
+                    <div class="section-header__view-more section-header__view-more-desktop">
+                        <a class="button button-view-more" href="#">
+                            <span class="button-title">View more</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                    <path d="M8.33398 6.66669L11.6673 10L8.33398 13.3334" stroke="#003459" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="section-content">
+                    <div class="grid grid-desktop-3-items grid-tablet-3-items grid-mobile-3-items">
+                        <div class="grid__item">
+                            <div class="card card-article">
+                                <div class="card__media">
+                                    <img class="card__image" src="./src/images/blog-pet-knowledge/image25.png" alt="Phốc sóc giống cún bắc kinh">
+                                </div>
+
+                                <div class="card-body card-body-blog">
+                                    <span class="blog-tag">
+                                        Pet knowledge
+                                    </span>
+                                    <h3 class="card-heading card-blog-heading">
+                                        <a class="card-title" href="#">What is a Pomeranian? How to Identify Pomeranian Dogs</a>
+                                    </h3>
+                                    <p class="card-content card-content-heading">
+                                        The Pomeranian, also known as the Pomeranian (Pom dog), is always in the top of the cutest pets. Not only that, the small, lovely, smart, friendly, and skillful circus dog breed.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="grid__item">
+                            <div class="card card-article">
+                                <div class="card__media">
+                                    <img class="card__image" src="./src/images/blog-pet-knowledge/image26.png" alt="Samoyed trắng lông xù">
+                                </div>
+
+                                <div class="card-body card-body-blog">
+                                    <span class="blog-tag">
+                                        Pet knowledge
+                                    </span>
+                                    <h3 class="card-heading card-blog-heading">
+                                        <a class="card-title" href="#">What is a Pomeranian? How to Identify Pomeranian Dogs</a>
+                                    </h3>
+                                    <p class="card-content">
+                                        The Pomeranian, also known as the Pomeranian (Pom dog), is always in the top of the cutest pets. Not only that, the small, lovely, smart, friendly, and skillful circus dog breed.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="grid__item">
+                            <div class="card card-article">
+                                <div class="card__media">
+                                    <img class="card__image" src="./src/images/blog-pet-knowledge/image27.png" alt="Doggy man">
+                                </div>
+
+                                <div class="card-body card-body-blog">
+                                    <span class="blog-tag">
+                                        Pet knowledge
+                                    </span>
+                                    <h3 class="card-heading card-blog-heading">
+                                        <a class="card-title" href="#">What is a Pomeranian? How to Identify Pomeranian Dogs</a>
+                                    </h3>
+                                    <p class="card-content">
+                                        The Pomeranian, also known as the Pomeranian (Pom dog), is always in the top of the cutest pets. Not only that, the small, lovely, smart, friendly, and skillful circus dog breed.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- button--view-more-mobile -->
+                <div class="section-header__view-more section-header__view-more-mobile">
+                    <a class="button button-view-more" href="#">
+                        <span>View more</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M8.33398 6.66669L11.6673 10L8.33398 13.3334" stroke="#003459" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </a>
+                </div>
+
+            </div>
+        </section>
     </main>
 
-    <footer class="footer">
-        <section class="frame28">
-            <h2>Register</h2>
-            <div class="register-email">
-                <p>Register now so you don't miss our programs</p>
-                <div class="input-your-email">
-                    <form action="#">
-                        <input type="email" name="email" placeholder="Enter your Email" class="inp" required>
-                    </form>
+    <!-- Footer -->
+    <footer>
+        <section class="section section-footer">
+            <div class="container container-footer">
+                <div class="register-contact">
+                    <div class="register-form">
+                        <h2 class="cont-form-register">Register now so you don't miss our programs</h2>
 
-                    <button type="button" id="btn-sub">Subcribe Now</button>
+                        <form class="form-your-email" action="# ">
+                            <input type="email" class="input-email" name="email" placeholder="Enter your Email" required>
+                            <button type="button" class="btn-subcribe">Subcribe Now</button>
+                        </form>
+                    </div>
+
+                    <div class="info-contact">
+                        <div class="info">
+                            <a href="#">Home</a>
+                            <a href="#">Category</a>
+                            <a href="#">About</a>
+                            <a href="#">Contact</a>
+                        </div>
+
+                        <div class="contact">
+                            <i class="fa-brands fa-facebook"></i>
+                            <i class="fa-brands fa-twitter"></i>
+                            <i class="fa-brands fa-instagram"></i>
+                            <i class="fa-brands fa-youtube"></i>
+                        </div>
+                    </div>
                 </div>
-            </div>
 
-            <div class="info-contact">
-                <div class="info">
-                    <a>Home</a>
-                    <a>Category</a>
-                    <a>About</a>
-                    <a>Contact</a>
+                <div class="content-footer">
+                    <div class="cont-footer-nth">© 2022 Monito. All rights reserved.</div>
+
+                    <div class="logo cont-footer-nth">
+                        <a href="#"><img src="./src/images/svg/Logo.svg" alt="Monito"></a>
+                    </div>
+
+                    <div class="terms-privacy cont-footer-nth">
+                        <p>Terms of Service</p>
+                        <p>Privacy Policy</p>
+                    </div>
                 </div>
 
-                <div class="contact">
-                    <i class="fa-brands fa-facebook"></i>
-                    <i class="fa-brands fa-twitter"></i>
-                    <i class="fa-brands fa-instagram"></i>
-                    <i class="fa-brands fa-youtube"></i>
-                </div>
-            </div>
-        </section>
-
-        <section class="frame26">
-            <h2>Footer</h2>
-            <div>© 2022 Monito. All rights reserved.</div>
-
-            <div>
-                <a href="#"> <img src="./src/images/Logo.svg" alt="Monito"> </a>
-            </div>
-
-            <div class="terms-privacy">
-                <p>Terms of Service</p>
-                <p>Privacy Policy</p>
             </div>
         </section>
 
     </footer>
 
-    <script>
-        function openNav() {
-            document.getElementById("mySidenav").style.width = "100%";
-        }
-
-        function closeNav() {
-            document.getElementById("mySidenav").style.width = "0";
-        }
-    </script>
 </body>
 
 </html>
