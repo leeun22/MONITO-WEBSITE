@@ -10,19 +10,8 @@ body {
     font-weight: 700;
 }
 
-h1 {
-    margin-block: unset;
-}
-
-h2 {
-    margin-block: unset;
-}
-
-p {
-    margin-block: unset;
-}
-
 a {
+    display: block;
     text-decoration: none;
 }
 
@@ -39,24 +28,17 @@ a {
 .container-header {
     /* border: 1px solid blue; */
     width: 100%;
-    margin: 0 auto;
-    /* position: absolute; */
     display: flex;
-    /* justify-content: space-between; */
     align-items: center;
-    z-index: 1;
-    /* gap: 48px; */
-    gap: 3%;
+    justify-content: space-between;
 }
 
 .logo {
     cursor: pointer;
-    /* margin: 0; */
 }
 
 .logo img {
     width: 115px;
-    max-width: unset;
     height: 40px;
 }
 
@@ -79,8 +61,8 @@ a {
 .sidenav {
     display: flex;
     gap: 48px;
-    overflow-x: hidden;
     transition: 0.5s ease;
+    overflow: hidden;
 }
 
 .sidenav a {
@@ -89,8 +71,8 @@ a {
     color: #024675;
     display: block;
     transition: 0.3s ease;
-    font-size: 22px;
-    line-height: 24px;
+    font-size: 16px;
+    line-height: 1.5;
 }
 
 .sidenav a:hover {
@@ -115,15 +97,12 @@ a {
     display: flex;
     align-items: center;
     gap: 14px;
-    margin-inline-start: -12px;
 }
 
 .search {
-    display: flex;
-    max-width: 280px;
+    width: 280px;
+    max-width: 100%;
     padding: 12px 20px 12px 16px;
-    align-items: center;
-    gap: 12px;
     overflow: auto;
     -moz-border-radius: 46px;
     -webkit-border-radius: 46px;
@@ -131,22 +110,24 @@ a {
     background: #FDFDFD;
 }
 
-.search-form {
+.form__search {
     display: flex;
-    flex-wrap: wrap;
-    gap: 1.2rem;
+    gap: 12px;
+    align-items: center;
 }
 
-.search-nth:nth-child(1) {
+
+/* nth-cild: Chọn phần tử thứ n trong ptu cha */
+
+.form__search-general:nth-child(1) {
     order: 2;
 }
 
-.search-nth:nth-child(2) {
+.form__search-general:nth-child(2) {
     order: 1;
 }
 
-.search input[type="search"],
-.search button[type="submit"] {
+.form__search-general {
     color: #99A2A5;
     font-family: 'SVN-Gilroy Light';
     font-size: 14px;
@@ -156,77 +137,65 @@ a {
     border: none;
 }
 
-.search button[type="submit"] {
+.btn-search {
     background: none;
     font-size: 18px;
     color: #88898a;
     cursor: pointer;
 }
 
-.search input[type="search"] {
+.input-search {
     width: 175px;
 }
 
-.inp-search::-webkit-input-placeholder {
+.input-search::-webkit-input-placeholder {
     opacity: 0.5;
 }
 
 .btn-join {
-    border-radius: 57px;
-    background: var(--primary-color-dark-blue, #003459);
-    padding: 14px 28px 10px 28px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-}
-
-.btn-join button {
-    background: none;
+    font-family: 'SVN-Gilroy Light';
+    font-weight: 700;
     color: #FDFDFD;
+    border-radius: 57px;
+    background: #003459;
+    padding: 14px 28px 10px 28px;
     font-size: 16px;
-    font-weight: 500;
-    line-height: 24px;
-    border: none;
-    cursor: pointer;
+    line-height: 1.5;
 }
 
 
 /* Drop Down Nation */
 
-.nation {
-    line-height: 23px;
-    display: flex;
+.language {
     padding: 10px 8px 8px 8px;
-    justify-content: flex-end;
+}
+
+.choose-language {
+    display: flex;
     align-items: center;
-    gap: 4px;
-    align-self: stretch;
+    gap: 8px;
 }
 
 .nation__dropdown {
     position: relative;
     display: inline-block;
-    align-items: center;
-    gap: 8px;
     font-size: 16px;
-    line-height: 23px;
-}
-
-.button--dropdown-btn i {
-    font-size: 10px;
-    cursor: pointer;
+    line-height: 1.43;
 }
 
 
-/* Drop-Down-Nation */
+/* Drop-Down-Language */
 
 .button__dropdown {
     font-size: 16px;
+    line-height: 1.43;
     color: #002A48;
     border: none;
     cursor: pointer;
     background: none;
+    display: flex;
+    align-items: center;
+    gap: 4px;
 }
 
 .dropdown {
@@ -237,6 +206,7 @@ a {
 .dropdown-content {
     display: none;
     position: absolute;
+    left: -40%;
     background-color: #f1f1f1;
     min-width: 160px;
     overflow: auto;
@@ -266,7 +236,6 @@ a {
     /* border: 1px solid red; */
     border-radius: 0 0 40px 40px;
     overflow: hidden;
-    background-image: url("../images/banner/header-banner.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -277,21 +246,8 @@ a {
     justify-content: center;
 }
 
-.container-banner-main {
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    border-radius: 20px;
-    max-width: 1180px;
-    padding-inline: unset;
+.section-banner-main {
     margin-inline: 16px;
-}
-
-.banner-main-bg-1 {
-    background-image: url("../images/banner/main-banner.png");
-}
-
-.banner-main-bg-2 {
-    background-image: url("../images/banner/main-banner-2.png");
 }
 
 .container-banner {
@@ -303,20 +259,29 @@ a {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    /* fix cho các items luôn ở dưới cùng của 1 box */
-    /* grid-auto-flow: row; */
-    /* grid-template-rows: auto; */
-    /* grid-auto-rows: 1fr; */
 }
+
+
+/**********/
 
 .container-banner-header {
     grid-template-columns: repeat(2, 1fr);
 }
 
+.container-banner-main {
+    grid-template-columns: repeat(2, 1fr);
+    border-radius: 20px;
+    max-width: 1180px;
+}
+
+.banner-main-bg-2 {
+    background-image: url("../images/banner/main-banner-2.png");
+}
+
 .cubic-image-banner-header img {
     margin-bottom: -5px;
-    /* width: 100%; */
     max-width: 944px;
+    transition: 0.6s ease;
 }
 
 .cubic-image-banner-main {
@@ -342,19 +307,20 @@ a {
 .content-banner-main {
     display: grid;
     align-items: center;
-    padding-block: 56px 64px;
+    padding-block: 64px 56px;
 }
 
 .content-banner-main-1 {
     justify-content: end;
     text-align: right;
-    padding-inline: 0 85px;
+    /* trừ 16px của .container */
+    padding-inline: 0 69px;
 }
 
 .content-banner-main-2 {
     justify-content: start;
     text-align: left;
-    padding-inline: 85px 0;
+    padding-inline: 69px 0;
 }
 
 .content-banner-1 {
@@ -418,7 +384,7 @@ a {
     justify-content: flex-start;
 }
 
-.button-banner button {
+.view-intro {
     font-family: 'SVN-Gilroy Light';
     display: flex;
     justify-content: center;
@@ -426,10 +392,8 @@ a {
     border-radius: 57px;
     cursor: pointer;
     font-size: 16px;
+    line-height: 1.5;
     padding: 14px 28px 10px 28px;
-}
-
-.view-intro {
     font-weight: 600;
     color: #003459;
     gap: 8px;
@@ -445,6 +409,8 @@ a {
 .explore-now {
     font-family: 'SVN-Gilroy Light';
     font-weight: 600;
+    font-size: 16px;
+    line-height: 1.5;
     max-width: 163px;
     width: 100%;
     gap: 10px;
@@ -549,6 +515,10 @@ a {
     cursor: pointer;
 }
 
+.card__media img {
+    width: 100%;
+}
+
 .card__image {
     display: block;
 }
@@ -628,6 +598,11 @@ a {
     border-radius: 8px;
     background: #FCEED5;
     margin-top: 10px;
+}
+
+.img-product-gift {
+    width: 20px;
+    height: 20px;
 }
 
 .dot-blue {
@@ -733,6 +708,7 @@ a {
 }
 
 .register-contact {
+    width: 100%;
     display: flex;
     padding-bottom: 0;
     flex-direction: column;
@@ -800,7 +776,8 @@ a {
 
 .btn-subcribe {
     display: flex;
-    width: 163px;
+    max-width: 163px;
+    width: 100%;
     padding: 14px 28px 10px 28px;
     justify-content: center;
     align-items: center;
@@ -816,9 +793,10 @@ a {
 .info-contact {
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
     align-items: flex-start;
     justify-content: space-between;
-    gap: 562px;
+    /* gap: 562px; */
     padding: 40px 0;
 }
 
@@ -837,14 +815,10 @@ a {
 
 .contact {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     gap: 40px;
     font-size: 24px;
     color: #00171F;
-}
-
-.contact i {
-    cursor: pointer;
 }
 
 .content-footer {

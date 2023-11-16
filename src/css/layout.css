@@ -13,6 +13,10 @@
     padding-inline: 16px;
 }
 
+.container-banner-main {
+    padding-inline: unset;
+}
+
 img {
     max-width: 100%;
     max-height: 100%;
@@ -47,6 +51,9 @@ img {
     .grid-mobile-3-items .grid__item {
         width: calc(100%);
     }
+    .heading-cont-bann-main {
+        justify-content: center;
+    }
 }
 
 
@@ -58,6 +65,12 @@ img {
     }
     .grid-tablet-3-items .grid__item {
         width: calc(100%/3);
+    }
+    .section-banner-header {
+        background-image: url("../images/banner/header-banner.png");
+    }
+    .banner-main-bg-1 {
+        background-image: url("../images/banner/main-banner.png");
     }
 }
 
@@ -73,26 +86,36 @@ img {
     }
 }
 
+@media (min-width: 1051px) and (max-width: 1200px) {
+    .input-email {
+        width: 85%;
+    }
+}
+
 
 /* draf-responsive menu */
 
 @media (max-width: 1200px) {
-    #grid-tablet-banner-2-iteams {
-        grid-template-columns: repeat(1, 1fr);
-    }
-    .content-banner-header {
-        padding-block: 100px 25px;
+    .content-banner-main {
+        padding-inline: 21px;
     }
     .cubic-image-banner-header img {
-        width: 414px;
-        height: 386px;
+        margin-left: -175px;
+    }
+    /* nth-of-type: SX lại thứ tự các phần tử có cùng kiểu span với thuộc tính order dùng cho flexbox */
+    .cont-footer-nth:nth-of-type(1) {
+        order: 3;
+        margin-top: 8px;
+    }
+    .cont-footer-nth:nth-of-type(3) {
+        order: 2;
+    }
+    .cont-footer-nth:nth-of-type(2) {
+        order: 1;
     }
 }
 
 @media (max-width: 1207px) {
-    .section-banner-header {
-        background-position: left;
-    }
     .tablet-menu-block {
         display: block;
     }
@@ -128,13 +151,86 @@ img {
         justify-content: space-between;
         padding-inline: 10px 14px;
     }
+    .cubic-image-banner-header img {
+        margin-left: -75px;
+    }
+}
+
+@media (max-width:1024px) {
+    .grid-tablet-banner-2-iteams {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .content-banner-header {
+        padding-block: 100px 25px;
+    }
+    .cubic-image-banner-header img {
+        width: 414px;
+        height: 386px;
+    }
+    .section-banner-header {
+        background-image: url("../images/banner/header-banner-mobile.png");
+    }
+    .cubic-image-banner-header img {
+        margin-left: unset;
+    }
+    .banner-main-bg-1 {
+        background-image: url("../images/banner/main-banner-mobile.png");
+    }
+    .location-element-mobile:nth-child(1) {
+        order: 2;
+    }
+    .location-element-mobile:nth-child(2) {
+        order: 1;
+    }
+    .content-banner-main {
+        padding-block: 32px;
+        text-align: center;
+    }
+    .content-banner-main-1 {
+        justify-content: center;
+    }
+    .content-banner-main-2 {
+        justify-content: center;
+    }
+    .image-bann-main-1 {
+        width: 524px;
+        height: 349px;
+    }
+    .button-banner {
+        justify-content: space-between;
+    }
+    .button-banner-header {
+        justify-content: start;
+    }
+    .section-pet-seller {
+        padding-block: unset;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    .form-your-email {
+        width: 100%;
+    }
+    .register-form {
+        flex-wrap: wrap;
+        width: unset
+    }
+    .cont-form-register {
+        width: 100%;
+    }
+}
+
+@media (min-width: 415px) and (max-width: 1050px) {
+    .register-contact {
+        width: 95%;
+    }
 }
 
 @media (max-width:992px) {
     .btn-join {
         display: none;
     }
-    .nation {
+    .language {
         display: none;
     }
 }
@@ -155,9 +251,24 @@ img {
         padding: 2px;
         color: #003459;
     }
+    .form-your-email {
+        flex-direction: column;
+    }
+    .info-contact {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+    .btn-subcribe {
+        max-width: 100%;
+    }
+    .info {
+        gap: 40px;
+    }
 }
 
-@media (max-width:568px) {
+@media (max-width:576px) {
     .content-banner-1 {
         font-size: 46px;
         line-height: 1.3;
@@ -176,6 +287,22 @@ img {
     .button-banner {
         gap: 16px;
     }
+    .view-intro-mobile {
+        padding: 14px 25px 10px 25px;
+    }
+    .terms-privacy {
+        margin-top: 32px;
+    }
+    .cont-form-register {
+        font-size: 20px;
+        line-height: 1.6;
+    }
+    .section-footer {
+        padding-block: 40px 20px;
+    }
+}
+
+@media (max-width:568px) {
     .subheading {
         font-size: 14px;
         line-height: 1.43;
@@ -187,6 +314,17 @@ img {
     .card-heading {
         font-size: 14px;
         line-height: 1.43;
+    }
+    .cont-bann-1 {
+        font-size: 36px;
+        line-height: 1.5;
+    }
+    .cont-bann-2 {
+        font-size: 24px;
+        line-height: 1.5;
+    }
+    .cont-bann-3 {
+        max-width: 342px;
     }
     .product-info {
         display: grid;
@@ -237,9 +375,6 @@ img {
     .section-banner-main-2 {
         display: none;
     }
-    .section-footer {
-        margin-top: 40px;
-    }
     .section-card,
     .section-content {
         margin-block: 20px;
@@ -251,69 +386,5 @@ img {
     }
     .card-content-heading {
         margin-top: 6px;
-    }
-}
-
-
-/* ====FOOTER RESPONSIVE=== */
-
-@media screen and (max-width: 1432px) {
-    .register-contact {
-        display: flex;
-    }
-    /* nth-of-type: SX lại thứ tự các phần tử có cùng kiểu span với thuộc tính order dùng cho flexbox */
-    .cont-footer-nth:nth-of-type(1) {
-        order: 3;
-        margin-top: 8px;
-    }
-    .cont-footer-nth:nth-of-type(3) {
-        order: 2;
-    }
-    .cont-footer-nth:nth-of-type(2) {
-        order: 1;
-    }
-}
-
-@media (min-width: 1051px) and (max-width: 1200px) {
-    .info-contact {
-        gap: 20px;
-        flex-wrap: wrap;
-    }
-    .input-email {
-        width: 85%;
-    }
-}
-
-@media (max-width: 1200px) {
-    .info-contact {
-        gap: 20px;
-        flex-wrap: wrap;
-        justify-content: space-around;
-    }
-}
-
-@media screen and (max-width: 1050px) {
-    .register-form {
-        flex-wrap: wrap;
-        width: unset
-    }
-    .btn-subcribe,
-    .cont-form-register {
-        width: 100%;
-    }
-}
-
-@media (min-width: 415px) and (max-width: 1050px) {
-    .register-contact {
-        width: 95%;
-    }
-}
-
-@media screen and (max-width: 573px) {
-    .terms-privacy {
-        margin-top: 32px;
-    }
-    .section-footer {
-        padding-bottom: 115px;
     }
 }
