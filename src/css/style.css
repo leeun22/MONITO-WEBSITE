@@ -307,7 +307,7 @@ a {
 
 .content-banner-3 {
     font-family: 'SVN-Gilroy Light';
-    width: 480px;
+    max-width: 480px;
     font-size: 16px;
     font-weight: 600;
     line-height: 24px;
