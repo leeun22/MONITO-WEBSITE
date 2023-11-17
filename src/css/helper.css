@@ -1,0 +1,65 @@
+/* =======HELPER======== */
+
+
+/* ====DISPLAY==== */
+
+.d-block {
+    display: block;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.d-grid {
+    display: grid;
+}
+
+.d-inline-block {
+    display: inline-block;
+}
+
+.d-inline-flex {
+    display: inline-flex;
+}
+
+.d-none {
+    display: none;
+}
+
+
+/* ====FLEX-DIRECTION==== */
+
+.f-direction-col {
+    flex-direction: column;
+}
+
+.f-direction-row {
+    flex-direction: row;
+}
+
+
+/* ====FLEX-WRAP==== */
+
+.f-wrap {
+    flex-wrap: wrap;
+}
+
+
+/* ====JUSTIFY-CONTENT==== */
+
+.jc-start {
+    justify-content: start;
+}
+
+.jc-end {
+    justify-content: end;
+}
+
+.jc-center {
+    justify-content: center;
+}
+
+.jc-space-between {
+    justify-content: space-between;
+}

@@ -1,10 +1,12 @@
 // ====NAV BAR MENU MOBILE====
 function openNav() {
-    document.getElementById("mySidenav").style.width = "100%";
+    const headerNav = document.getElementById("mySidenav");
+    headerNav.classList.add('active');
 }
 
 function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
+    const headerNav = document.getElementById("mySidenav");
+    headerNav.classList.remove('active');
 }
 
 

@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" href="./src/css/helper.css" rel="stylesheet">
     <link type="text/css" href="./src/css/style.css" rel="stylesheet">
     <link type="text/css" href="./src/css/layout.css" rel="stylesheet">
     <link rel="stylesheet" href="./src/fonts/svn-gilroy/style.css">
@@ -12,31 +13,42 @@
 </head>
 
 <body>
-    <header class="section section-header-menu">
-        <div class="container container-header">
-            <div class="logo tablet-menu">
-                <a href="./index.html"><img src="./src/images/svg/Logo.svg" alt="Monito"></a>
+    <header class="section section-header-menu d-flex">
+        <div class="container container-header d-flex jc-space-between">
+            <div class="logo logo-header">
+                <a class="img-logo d-block" href="./index.html"><img src="./src/images/svg/Logo.svg" alt="Monito"></a>
             </div>
 
-            <div class="menu tablet-menu">
-                <span class="bar-menu tablet-menu-block" onclick="openNav()"> 
+            <div class="menu">
+                <button type="button" class="bar-menu tablet-menu-block d-none" onclick="openNav()"> 
                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="33" viewBox="0 0 32 33" fill="none">
                         <path d="M6.66602 23.1666H25.3327M6.66602 16.4999H25.3327M6.66602 9.83325H25.3327" stroke="#00171F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
-                </span>
+                </button>
 
                 <nav id="mySidenav" class="sidenav tablet-menu-block">
-                    <p class="closebtn" onclick="closeNav()">&times;</p>
-                    <a href="#">Home</a>
-                    <a href="#">Category</a>
-                    <a href="#">About</a>
-                    <a href="#">Contact</a>
+                    <button type="button" class="closebtn d-none" id="btnCloseNav" onclick="closeNav()">&times;</button>
+
+                    <ul class="nav__list-menu d-flex">
+                        <li class="nav__items-menu">
+                            <a href="#" class="nav__link-menu d-block ">Home</a>
+                        </li>
+                        <li class="nav__items-menu">
+                            <a href="#" class="nav__link-menu d-block">Category</a>
+                        </li>
+                        <li class="nav__items-menu">
+                            <a href="#" class="nav__link-menu d-block">About</a>
+                        </li>
+                        <li class="nav__items-menu">
+                            <a href="#" class="nav__link-menu d-block">Contact</a>
+                        </li>
+                    </ul>
                 </nav>
             </div>
 
-            <div class="box-search-join-nation tablet-menu">
+            <div class="header__search d-flex">
                 <div class="search">
-                    <form class="form__search" action="#">
+                    <form class="form__search d-flex" action="">
                         <input type="search" placeholder="Search something here!" name="search" class="form__search-general input-search">
                         <button type="submit" class="form__search-general btn-search">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
@@ -48,32 +60,41 @@
 
                 <a href="#" class="btn-join">Join the community</a>
 
-                <div class="language">
-                    <div class="choose-language">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                            <g clip-path="url(#clip0_990_1006)">
-                            <path d="M8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 8 16Z" fill="#D80027"/>
-                            <path d="M7.99905 4.17383L8.86242 6.83098H11.6563L9.39598 8.47317L10.2594 11.1304L7.99905 9.48814L5.73873 11.1304L6.60211 8.47317L4.3418 6.83098H7.13567L7.99905 4.17383Z" fill="#FFDA44"/>
-                            </g>
-                            <defs>
-                            <clipPath id="clip0_990_1006">
-                            <rect width="16" height="16" fill="white"/>
-                            </clipPath>
-                            </defs>
+                <div class="nation__dropdown d-inline-block">
+                    <button type="button" onclick="myFunction()" class="button__dropdown d-flex">
+                        <span class="flag">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <g clip-path="url(#clip0_990_1006)">
+                                <path d="M8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 8 16Z" fill="#D80027"/>
+                                <path d="M7.99905 4.17383L8.86242 6.83098H11.6563L9.39598 8.47317L10.2594 11.1304L7.99905 9.48814L5.73873 11.1304L6.60211 8.47317L4.3418 6.83098H7.13567L7.99905 4.17383Z" fill="#FFDA44"/>
+                                </g>
+                                <defs>
+                                <clipPath id="clip0_990_1006">
+                                <rect width="16" height="16" fill="white"/>
+                                </clipPath>
+                                </defs>
+                            </svg>
+                        </span>
+
+                        <span class="currency-tiltle">
+                            VND
+                        </span>
+                        
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M15 11L12 14L9 11" stroke="#002A48" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
+                    </button>
 
-                        <div class="nation__dropdown">
-                            <button type="button" onclick="myFunction()" class="button__dropdown">VND
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                    <path d="M15 11L12 14L9 11" stroke="#002A48" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                            </button>
+                    <div id="myDropdown" class="dropdown-content d-none">
+                        <ul class="nav__list-language">
+                            <li class="nav__item-language">
+                                <a class="nav__link-language d-block" href="#">English</a>
+                            </li>
 
-                            <div id="myDropdown" class="dropdown-content">
-                                <a href="#">English</a>
-                                <a href="#">Vietnamese</a>
-                            </div>
-                        </div>
+                            <li class="nav__item-language">
+                                <a class="nav__link-language d-block" href="#">Vietnamese</a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
 
@@ -83,17 +104,18 @@
 
     <main>
         <!-- Section Header Banner -->
-        <section class="section section-banner section-banner-header">
-            <div class="container container-banner container-banner-header grid-tablet-banner-2-iteams">
+        <section class="section section-banner section-banner-header d-flex jc-center jc-center">
+            <div class="container container-banner container-banner-header grid-tablet-banner-2-iteams d-grid jc-space-between">
                 <div class="content content-banner-header">
                     <h1 class="content-banner-1">One more friend</h1>
                     <p class="content-banner-2">Thousands more fun!</p>
                     <p class="content-banner-3">Having a pet means you have more joy, a new friend, a happy person who will always be with you to have fun. We have 200+ different pets that can meet your needs!
                     </p>
 
-                    <div class="button button-banner button-banner-header">
+                    <div class="button button-banner button-banner-header d-flex">
                         <!-- Turn on one video -->
-                        <button type="button" class="view-intro">View Intro
+                        <button type="button" class="view-intro d-flex d-flex jc-center">
+                            <span>View Intro</span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                                 <path d="M10 9V15L15 12L10 9Z" fill="#003459" stroke="#003459" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg> 
@@ -114,7 +136,7 @@
         <!-- Card New Product List -->
         <section class="section margin-block-large section-card-product-list">
             <div class="container container-product-list">
-                <div class="section-header">
+                <div class="section-header d-flex f-wrap jc-space-between">
                     <div class="section-heading">
                         <span class="subheading">
                             Whats new?
@@ -122,8 +144,8 @@
                         <h2 class="heading">Take a look at some of our pets</h2>
                     </div>
 
-                    <div class="section-header__view-more section-header__view-more-desktop">
-                        <a class="button button-view-more" href="#">
+                    <div class="section-header__view-more section-header__view-more-desktop d-inline-flex jc-center">
+                        <a class="button button-view-more d-flex jc-center" href="#">
                             <span>View more</span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                                     <path d="M8.33398 6.66669L11.6673 10L8.33398 13.3334" stroke="#003459" stroke-width="1.5" stroke-linecap="round"
@@ -135,9 +157,9 @@
 
                 <div class="section-card ">
                     <div class="grid grid-desktop-4-items grid-tablet-4-items grid-mobile-4-items">
-                        <div class="grid__item">
-                            <div class="card card-product">
-                                <div class="card__media">
+                        <div class="grid__item grid__item_product">
+                            <div class="card card-product d-grid">
+                                <div class="card__media card__media-product">
                                     <img src="./src/images/new-products/image1.png" alt="Phốc sóc trắng">
                                 </div>
 
@@ -146,7 +168,7 @@
                                         <a class="card-title" href="#">MO231 - Pomeranian White</a>
                                     </h3>
 
-                                    <div class="product-info">
+                                    <div class="product-info d-flex">
                                         <div class="product-info-title">
                                             <span class="pro-font-light">Gene:</span>
                                             <span class="product-info-title-bold">Male</span>
@@ -169,10 +191,10 @@
                             </div>
                         </div>
 
-                        <div class="grid__item">
-                            <div class="card card-product">
-                                <div class="card__media">
-                                    <img class="card__image" src="./src/images/new-products/image2.png" alt="Phốc sóc trắng">
+                        <div class="grid__item grid__item_product">
+                            <div class="card card-product d-grid">
+                                <div class="card__media card__media-product">
+                                    <img class="card__image d-block" src="./src/images/new-products/image2.png" alt="Phốc sóc trắng">
                                 </div>
 
                                 <div class="card-body card-body-product">
@@ -181,7 +203,7 @@
                                     </h3>
 
 
-                                    <div class="product-info">
+                                    <div class="product-info d-flex">
                                         <div class="product-info-title">
                                             <span class="pro-font-light">Gene:</span>
                                             <span class="product-info-title-bold">Male</span>
@@ -204,10 +226,10 @@
                             </div>
                         </div>
 
-                        <div class="grid__item">
-                            <div class="card card-product">
-                                <div class="card__media">
-                                    <img class="card__image" src="./src/images/new-products/image3.png" alt="Phốc sóc trắng">
+                        <div class="grid__item grid__item_product">
+                            <div class="card card-product d-grid">
+                                <div class="card__media card__media-product">
+                                    <img class="card__image d-block" src="./src/images/new-products/image3.png" alt="Phốc sóc trắng">
                                 </div>
 
                                 <div class="card-body card-body-product">
@@ -215,7 +237,7 @@
                                         <a class="card-title" href="#">MO231 - Pomeranian White</a>
                                     </h3>
 
-                                    <div class="product-info">
+                                    <div class="product-info d-flex">
                                         <div class="product-info-title">
                                             <span class="pro-font-light">Gene:</span>
                                             <span class="product-info-title-bold">Male</span>
@@ -238,10 +260,10 @@
                             </div>
                         </div>
 
-                        <div class="grid__item">
-                            <div class="card card-product">
-                                <div class="card__media">
-                                    <img class="card__image" src="./src/images/new-products/image4.png" alt="Phốc sóc trắng">
+                        <div class="grid__item grid__item_product">
+                            <div class="card card-product d-grid">
+                                <div class="card__media card__media-product">
+                                    <img class="card__image d-block" src="./src/images/new-products/image4.png" alt="Phốc sóc trắng">
                                 </div>
 
                                 <div class="card-body card-body-product">
@@ -249,7 +271,7 @@
                                         <a class="card-title" href="#">MO231 - Pomeranian White</a>
                                     </h3>
 
-                                    <div class="product-info">
+                                    <div class="product-info d-flex">
                                         <div class="product-info-title">
                                             <span class="pro-font-light">Gene:</span>
                                             <span class="product-info-title-bold">Male</span>
@@ -273,9 +295,9 @@
                             </div>
                         </div>
 
-                        <div class="grid__item">
-                            <div class="card card-product">
-                                <div class="card__media">
+                        <div class="grid__item grid__item_product">
+                            <div class="card card-product d-grid">
+                                <div class="card__media card__media-product">
                                     <img src="./src/images/new-products/image5.png" alt="Phốc sóc trắng">
                                 </div>
 
@@ -284,7 +306,7 @@
                                         <a class="card-title" href="#">MO231 - Pomeranian White</a>
                                     </h3>
 
-                                    <div class="product-info">
+                                    <div class="product-info d-flex">
                                         <div class="product-info-title">
                                             <span class="pro-font-light">Gene:</span>
                                             <span class="product-info-title-bold">Male</span>
@@ -307,9 +329,9 @@
                             </div>
                         </div>
 
-                        <div class="grid__item">
-                            <div class="card card-product">
-                                <div class="card__media">
+                        <div class="grid__item grid__item_product">
+                            <div class="card card-product d-grid">
+                                <div class="card__media card__media-product">
                                     <img src="./src/images/new-products/image6.png" alt="Phốc sóc trắng">
                                 </div>
 
@@ -318,7 +340,7 @@
                                         <a class="card-title" href="#">MO231 - Pomeranian White</a>
                                     </h3>
 
-                                    <div class="product-info">
+                                    <div class="product-info d-flex">
                                         <div class="product-info-title">
                                             <span class="pro-font-light">Gene:</span>
                                             <span class="product-info-title-bold">Male</span>
@@ -341,9 +363,9 @@
                             </div>
                         </div>
 
-                        <div class="grid__item">
-                            <div class="card card-product">
-                                <div class="card__media">
+                        <div class="grid__item grid__item_product">
+                            <div class="card card-product d-grid">
+                                <div class="card__media card__media-product">
                                     <img src="./src/images/new-products/image7.png" alt="Phốc sóc trắng">
                                 </div>
 
@@ -352,7 +374,7 @@
                                         <a class="card-title" href="#">MO231 - Pomeranian White</a>
                                     </h3>
 
-                                    <div class="product-info">
+                                    <div class="product-info d-flex">
                                         <div class="product-info-title">
                                             <span class="pro-font-light">Gene:</span>
                                             <span class="product-info-title-bold">Male</span>
@@ -375,9 +397,9 @@
                             </div>
                         </div>
 
-                        <div class="grid__item">
-                            <div class="card card-product">
-                                <div class="card__media">
+                        <div class="grid__item grid__item_product">
+                            <div class="card card-product d-grid">
+                                <div class="card__media card__media-product">
                                     <img src="./src/images/new-products/image8.png" alt="Phốc sóc trắng">
                                 </div>
 
@@ -386,7 +408,7 @@
                                         <a class="card-title" href="#">MO231 - Pomeranian White</a>
                                     </h3>
 
-                                    <div class="product-info">
+                                    <div class="product-info d-flex">
                                         <div class="product-info-title">
                                             <span class="pro-font-light">Gene:</span>
                                             <span class="product-info-title-bold">Male</span>
@@ -413,8 +435,8 @@
                 </div>
 
                 <!-- Button view-more-mobile -->
-                <div class="section-header__view-more section-header__view-more-mobile">
-                    <a class="button button-view-more" href="#">
+                <div class="section-header__view-more section-header__view-more-mobile d-none jc-center">
+                    <a class="button button-view-more d-flex jc-center" href="#">
                         <span>View more</span>
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                                 <path d="M8.33398 6.66669L11.6673 10L8.33398 13.3334" stroke="#003459" stroke-width="1.5" stroke-linecap="round"
@@ -426,21 +448,21 @@
         </section>
 
         <!-- Section Banner Main-->
-        <section class="section section-banner section-banner-main">
-            <div class="container container-banner container-banner-main banner-main-bg-1 grid-tablet-banner-2-iteams">
+        <section class="section section-banner section-banner-main jc-center jc-center">
+            <div class="container container-banner container-banner-main banner-main-bg-1 grid-tablet-banner-2-iteams d-grid jc-space-between">
                 <div class="cubic-image-banner-main location-element-mobile">
                     <img class="image-bann-main-1" src="./src/images/banner/main-banner-sm.png" alt="Girl and Puppy">
                 </div>
 
-                <div class="content content-banner-main content-banner-main-1 location-element-mobile">
+                <div class="content content-banner-main content-banner-main-1 location-element-mobile d-grid jc-end">
                     <h1 class="content-banner-1 cont-bann-1">One more friend</h1>
                     <p class="content-banner-2 cont-bann-2">Thousands more fun!</p>
                     <p class="content-banner-3 cont-bann-3">Having a pet means you have more joy, a new friend, a happy person who will always be with you to have fun. We have 200+ different pets that can meet your needs!
                     </p>
 
-                    <div class="button button-banner button-banner-main-1">
+                    <div class="button button-banner button-banner-main-1 d-flex">
                         <!-- Turn on one video -->
-                        <button type="button" class="view-intro view-intro-mobile">View Intro
+                        <button type="button" class="view-intro view-intro-mobile d-flex jc-center">View Intro
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                                 <path d="M10 9V15L15 12L10 9Z" fill="#003459" stroke="#003459" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg> 
@@ -457,16 +479,16 @@
         <!-- Card Our-Product -->
         <section class="section margin-block-large section-our-products">
             <div class="container container-our-products">
-                <div class="section-header">
-                    <div class="section-heading">
+                <div class="section-header d-flex f-wrap jc-space-between">
+                    <div class="section-heading d-grid">
                         <span class="subheading">
                             Whats new?
                         </span>
                         <h2 class="heading">Take a look at some of our pets</h2>
                     </div>
 
-                    <div class="section-header__view-more">
-                        <a class="button button-view-more" href="#">
+                    <div class="section-header__view-more jc-center">
+                        <a class="button button-view-more d-flex jc-center" href="#">
                             <span>View more</span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                                 <path d="M8.33398 6.66669L11.6673 10L8.33398 13.3334" stroke="#003459" stroke-width="1.5" stroke-linecap="round"
@@ -478,9 +500,9 @@
 
                 <div class="section-card">
                     <div class="grid grid-desktop-4-items grid-tablet-4-items grid-mobile-4-items">
-                        <div class="grid__item">
-                            <div class="card card-product">
-                                <div class="card__media">
+                        <div class="grid__item grid__item_product">
+                            <div class="card card-product d-grid">
+                                <div class="card__media card__media-product">
                                     <img src="./src/images/our-products/image9.png" alt="Zealandia Salmon Pate Wet Dog Food">
                                 </div>
 
@@ -489,7 +511,7 @@
                                         <a class="card-title" href="#">Reflex Plus Adult Cat Food Salmon</a>
                                     </h3>
 
-                                    <div class="product-info">
+                                    <div class="product-info d-flex">
                                         <div class="product-info-title">
                                             <span class="pro-font-light">Product:</span>
                                             <span class="product-info-title-bold">Dog Food</span>
@@ -509,20 +531,20 @@
                                         6.900.000 VND
                                     </div>
 
-                                    <div class="product-gift">
+                                    <button type="button" class="product-gift d-flex">
                                         <img class="img-product-gift" src="./src/images/svg/Gift.svg" alt="gift icon">
                                         <div class="dot-blue">
                                             <div class="dot-dot-bl"></div>
                                         </div>
                                         <p class="cont-gift">Free Toy & Free Shaker</p>
-                                    </div>
+                                    </button>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="grid__item">
-                            <div class="card card-product">
-                                <div class="card__media">
+                        <div class="grid__item grid__item_product">
+                            <div class="card card-product d-grid">
+                                <div class="card__media card__media-product">
                                     <img src="./src/images/our-products/image10.png" alt="gift icon">
                                 </div>
 
@@ -531,7 +553,7 @@
                                         <a class="card-title" href="#">Reflex Plus Adult Cat Food Salmon</a>
                                     </h3>
 
-                                    <div class="product-info">
+                                    <div class="product-info d-flex">
                                         <div class="product-info-title">
                                             <span class="pro-font-light">Product:</span>
                                             <span class="product-info-title-bold">Dog Food</span>
@@ -551,7 +573,7 @@
                                         6.900.000 VND
                                     </div>
 
-                                    <div class="product-gift">
+                                    <div class="product-gift d-flex">
                                         <img class="img-product-gift" src="./src/images/svg/Gift.svg" alt="gift icon">
                                         <div class="dot-blue">
                                             <div class="dot-dot-bl"></div>
@@ -562,9 +584,9 @@
                             </div>
                         </div>
 
-                        <div class="grid__item">
-                            <div class="card card-product">
-                                <div class="card__media">
+                        <div class="grid__item grid__item_product">
+                            <div class="card card-product d-grid">
+                                <div class="card__media card__media-product">
                                     <img src="./src/images/our-products/image11.png" alt="gift icon">
                                 </div>
 
@@ -573,7 +595,7 @@
                                         <a class="card-title" href="#">Reflex Plus Adult Cat Food Salmon</a>
                                     </h3>
 
-                                    <div class="product-info">
+                                    <div class="product-info d-flex">
                                         <div class="product-info-title">
                                             <span class="pro-font-light">Product:</span>
                                             <span class="product-info-title-bold">Dog Food</span>
@@ -593,7 +615,7 @@
                                         6.900.000 VND
                                     </div>
 
-                                    <div class="product-gift">
+                                    <div class="product-gift d-flex">
                                         <img class="img-product-gift" src="./src/images/svg/Gift.svg" alt="gift icon">
                                         <div class="dot-blue">
                                             <div class="dot-dot-bl"></div>
@@ -604,9 +626,9 @@
                             </div>
                         </div>
 
-                        <div class="grid__item">
-                            <div class="card card-product">
-                                <div class="card__media">
+                        <div class="grid__item grid__item_product">
+                            <div class="card card-product d-grid">
+                                <div class="card__media card__media-product">
                                     <img src="./src/images/our-products/image12.png" alt="Nệm nằm cho mèo cá voi xám vải lông">
                                 </div>
 
@@ -615,7 +637,7 @@
                                         <a class="card-title" href="#">Reflex Plus Adult Cat Food Salmon</a>
                                     </h3>
 
-                                    <div class="product-info">
+                                    <div class="product-info d-flex">
                                         <div class="product-info-title">
                                             <span class="pro-font-light">Product:</span>
                                             <span class="product-info-title-bold">Dog Food</span>
@@ -635,7 +657,7 @@
                                         6.900.000 VND
                                     </div>
 
-                                    <div class="product-gift">
+                                    <div class="product-gift d-flex">
                                         <img class="img-product-gift" src="./src/images/svg/Gift.svg" alt="gift icon">
                                         <div class="dot-blue">
                                             <div class="dot-dot-bl"></div>
@@ -646,9 +668,9 @@
                             </div>
                         </div>
 
-                        <div class="grid__item">
-                            <div class="card card-product">
-                                <div class="card__media">
+                        <div class="grid__item grid__item_product">
+                            <div class="card card-product d-grid">
+                                <div class="card__media card__media-product">
                                     <img src="./src/images/our-products/image13.png" alt="Neturvet Omega3">
                                 </div>
 
@@ -657,7 +679,7 @@
                                         <a class="card-title" href="#">Reflex Plus Adult Cat Food Salmon</a>
                                     </h3>
 
-                                    <div class="product-info">
+                                    <div class="product-info d-flex">
                                         <div class="product-info-title">
                                             <span class="pro-font-light">Product:</span>
                                             <span class="product-info-title-bold">Dog Food</span>
@@ -677,7 +699,7 @@
                                         6.900.000 VND
                                     </div>
 
-                                    <div class="product-gift">
+                                    <div class="product-gift d-flex">
                                         <img class="img-product-gift" src="./src/images/svg/Gift.svg" alt="gift icon">
                                         <div class="dot-blue">
                                             <div class="dot-dot-bl"></div>
@@ -688,9 +710,9 @@
                             </div>
                         </div>
 
-                        <div class="grid__item">
-                            <div class="card card-product">
-                                <div class="card__media">
+                        <div class="grid__item grid__item_product">
+                            <div class="card card-product d-grid">
+                                <div class="card__media card__media-product">
                                     <img src="./src/images/our-products/image14.png" alt="Trang phục cao bồi cưỡi ngựa cho cún con">
                                 </div>
 
@@ -699,7 +721,7 @@
                                         <a class="card-title" href="#">Reflex Plus Adult Cat Food Salmon</a>
                                     </h3>
 
-                                    <div class="product-info">
+                                    <div class="product-info d-flex">
                                         <div class="product-info-title">
                                             <span class="pro-font-light">Product:</span>
                                             <span class="product-info-title-bold">Dog Food</span>
@@ -719,7 +741,7 @@
                                         6.900.000 VND
                                     </div>
 
-                                    <div class="product-gift">
+                                    <div class="product-gift d-flex">
                                         <img class="img-product-gift" src="./src/images/svg/Gift.svg" alt="gift icon">
                                         <div class="dot-blue">
                                             <div class="dot-dot-bl"></div>
@@ -730,9 +752,9 @@
                             </div>
                         </div>
 
-                        <div class="grid__item">
-                            <div class="card card-product">
-                                <div class="card__media">
+                        <div class="grid__item grid__item_product">
+                            <div class="card card-product d-grid">
+                                <div class="card__media card__media-product">
                                     <img src="./src/images/our-products/image15.png" alt="Bờm tóc đùi gà cho thú cưng">
                                 </div>
 
@@ -741,7 +763,7 @@
                                         <a class="card-title" href="#">Reflex Plus Adult Cat Food Salmon</a>
                                     </h3>
 
-                                    <div class="product-info">
+                                    <div class="product-info d-flex">
                                         <div class="product-info-title">
                                             <span class="pro-font-light">Product:</span>
                                             <span class="product-info-title-bold">Dog Food</span>
@@ -761,7 +783,7 @@
                                         6.900.000 VND
                                     </div>
 
-                                    <div class="product-gift">
+                                    <div class="product-gift d-flex">
                                         <img class="img-product-gift" src="./src/images/svg/Gift.svg" alt="gift icon">
                                         <div class="dot-blue">
                                             <div class="dot-dot-bl"></div>
@@ -772,9 +794,9 @@
                             </div>
                         </div>
 
-                        <div class="grid__item">
-                            <div class="card card-product">
-                                <div class="card__media">
+                        <div class="grid__item grid__item_product">
+                            <div class="card card-product d-grid">
+                                <div class="card__media card__media-product">
                                     <img src="./src/images/our-products/image16.png" alt="Thú nhồi bông bạch tuộc hồng">
                                 </div>
 
@@ -783,7 +805,7 @@
                                         <a class="card-title" href="#">Reflex Plus Adult Cat Food Salmon</a>
                                     </h3>
 
-                                    <div class="product-info">
+                                    <div class="product-info d-flex">
                                         <div class="product-info-title">
                                             <span class="pro-font-light">Product:</span>
                                             <span class="product-info-title-bold">Dog Food</span>
@@ -803,7 +825,7 @@
                                         6.900.000 VND
                                     </div>
 
-                                    <div class="product-gift">
+                                    <div class="product-gift d-flex">
                                         <img class="img-product-gift" src="./src/images/svg/Gift.svg" alt="gift icon">
                                         <div class="dot-blue">
                                             <div class="dot-dot-bl"></div>
@@ -823,16 +845,16 @@
         <!-- Pet Seller -->
         <section class="section section-pet-seller">
             <div class="container container-pet-seller">
-                <div class="section-header">
-                    <div class="section-heading-pet-seller">
+                <div class="section-header d-flex f-wrap jc-space-between">
+                    <div class="section-heading-pet-seller d-flex jc-space-between">
                         <span class="subheading">
                             Proud to be part of
                         </span>
                         <h2 class="heading">Pet Sellers</h2>
                     </div>
 
-                    <div class="section-header__view-more">
-                        <a class="button button-view-more" href="#">
+                    <div class="section-header__view-more jc-center">
+                        <a class="button button-view-more d-flex d-flex jc-center" href="#">
                             <span>View more</span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                                 <path d="M8.33398 6.66669L11.6673 10L8.33398 13.3334" stroke="#003459" stroke-width="1.5" stroke-linecap="round"
@@ -842,7 +864,7 @@
                     </div>
                 </div>
 
-                <div class="section-brand">
+                <div class="section-brand d-flex f-wrap">
                     <img class="image-brand-1" src="./src/images/pet-sellers-brand/image17.png" alt="Seba Cat Food">
                     <img class="image-brand-2" src="./src/images/pet-sellers-brand/image18.png" alt="Whiskas Adult Chicken">
                     <img class="image-brand-3" src="./src/images/pet-sellers-brand/image19.png" alt="Bakers Dog Food">
@@ -855,10 +877,10 @@
         </section>
 
         <!-- Section Banner Main 2 -->
-        <section class="section section-banner section-banner-main section-banner-main-2">
-            <div class="container container-banner container-banner-main banner-main-bg-2 grid-tablet-banner-2-iteams">
-                <div class="content content-banner-main content-banner-main-2">
-                    <div class="heading-cont-bann-main">
+        <section class="section section-banner section-banner-main section-banner-main-2 jc-center">
+            <div class="container container-banner container-banner-main banner-main-bg-2 grid-tablet-banner-2-iteams d-grid jc-space-between">
+                <div class="content content-banner-main content-banner-main-2 jc-start">
+                    <div class="heading-cont-bann-main d-flex">
                         <h1 class="content-banner-1 cont-bann-1">Adoption</h1>
                         <svg xmlns="http://www.w3.org/2000/svg" width="42" height="38" viewBox="0 0 42 38" fill="none">
                             <path d="M22.3146 8.51235V8.56143C22.3139 9.5215 22.4822 10.4745 22.8121 11.3785L22.7927 11.3199C23.1133 12.2007 23.6581 12.9867 24.3754 13.6032L24.3818 13.608C25.0618 14.2081 25.9662 14.5739 26.9578 14.5739H27.0353H27.0321C28.3403 14.5666 29.5932 14.0553 30.5205 13.1504C31.5335 12.2387 32.3216 11.1129 32.8251 9.85831L32.8461 9.79813C33.3341 8.61246 33.5911 7.34756 33.6036 6.06903V6.01361C33.6036 5.02552 33.4275 4.07701 33.1061 3.19659L33.1255 3.25518C32.8049 2.37433 32.2601 1.58836 31.5428 0.971801L31.5363 0.96705C30.8065 0.323216 29.853 -0.0223897 28.8716 0.00112587H28.8764C27.5678 0.00661014 26.3142 0.518173 25.388 1.42468C24.3851 2.33632 23.6036 3.45697 23.1011 4.70407L23.0801 4.76424C22.6134 5.87268 22.3372 7.16005 22.3227 8.5076V8.51235H22.3146ZM30.9469 20.4645L30.9452 20.5975C30.9433 21.7882 31.3186 22.9502 32.0192 23.9228L32.0063 23.9038C32.3258 24.3551 32.7519 24.7238 33.2483 24.9786C33.7447 25.2334 34.2965 25.3666 34.8568 25.3669L35.0167 25.3638H35.0086C36.3324 25.3495 37.6047 24.8593 38.5843 23.9861L38.5794 23.9909C39.6215 23.1158 40.4643 22.0357 41.0533 20.8207C41.6423 19.6057 41.9643 18.2829 41.9984 16.9381V16.9254L42 16.7955C42 15.5525 41.6027 14.3997 40.926 13.4544L40.9389 13.4734C40.6065 12.997 40.1556 12.6116 39.6287 12.3539C39.1019 12.0962 38.5167 11.9746 37.9286 12.0008H37.9366C36.6129 12.015 35.3405 12.5053 34.361 13.3784L34.3658 13.3736C33.3222 14.2539 32.4786 15.3392 31.8897 16.5593C31.3007 17.7794 30.9795 19.1071 30.9469 20.4566V20.4676V20.4645ZM20.9968 19.7962C18.6389 19.9224 16.3807 20.7703 14.54 22.2206L14.5626 22.2031C12.3094 23.7721 10.368 25.732 8.83413 27.986L8.78245 28.0668C7.39997 29.8879 6.59202 32.0662 6.45845 34.3326L6.45684 34.3643L6.45361 34.502C6.45361 35.1418 6.61349 35.7467 6.89612 36.2771L6.88643 36.2565C7.1576 36.743 7.58112 37.131 8.09446 37.3634L8.11061 37.3697C8.58058 37.5898 9.12806 37.7624 9.69978 37.859L9.73854 37.8638C10.3347 37.956 10.9374 38.0015 11.5409 38H11.662H11.6556C13.3196 37.892 14.9521 37.503 16.4812 36.8504L16.3875 36.8868C17.8316 36.2694 19.3711 35.8942 20.9419 35.7768L20.9919 35.7736C22.7733 35.9034 24.4238 36.2961 25.9581 36.9121L25.8499 36.8741C27.4497 37.5041 29.1433 37.8753 30.8645 37.973L30.9097 37.9746C33.9955 37.9767 35.5383 36.7738 35.5383 34.3659C35.4684 32.6786 34.9735 31.0346 34.0978 29.5806L34.1252 29.6281C33.1804 27.8858 31.9933 26.2807 30.598 24.8586L30.6045 24.865C29.2407 23.4684 27.6811 22.2693 25.9726 21.3037L25.8725 21.2515C24.4133 20.3588 22.7413 19.856 21.0226 19.7931H21.0032L20.9968 19.7962ZM14.9647 14.5755H15.039C15.9914 14.5765 16.9104 14.2312 17.6182 13.6064L17.6149 13.6096C18.3265 13.0021 18.8689 12.2273 19.1912 11.3579L19.2041 11.3199C19.5245 10.4343 19.6868 9.50111 19.6838 8.56143V8.50918V8.51235C19.6692 7.15847 19.3931 5.87268 18.9005 4.69457L18.9263 4.76424C18.4259 3.49609 17.6385 2.35584 16.6233 1.42943L16.6169 1.42468C15.6904 0.519718 14.4378 0.008873 13.1301 0.00270936H13.0542C12.0625 0.00270936 11.1581 0.370077 10.475 0.971801L10.4782 0.968634C9.77084 1.57511 9.22496 2.34468 8.90196 3.22035L8.88904 3.25835C8.58057 4.08493 8.40292 5.03977 8.40292 6.0342V6.06587V6.06428C8.41691 7.36974 8.68267 8.66081 9.1862 9.86939L9.16037 9.79972C9.66119 11.0748 10.4547 12.2197 11.4795 13.1456L11.486 13.152C12.4137 14.0546 13.6658 14.5641 14.9728 14.5708H14.9744L14.9647 14.5755ZM4.06339 12.0039L3.91481 12.0008C2.73423 12.0008 1.69255 12.5803 1.06916 13.4655L1.06108 13.4766C0.36726 14.4512 -0.00325012 15.6118 1.90735e-05 16.8003L0.00163651 16.9365V16.9301C0.0334435 18.2741 0.353107 19.5966 0.939892 20.8116C1.52668 22.0267 2.36747 23.1071 3.4077 23.983L3.42061 23.9941C4.39863 24.8639 5.6678 25.3523 6.98817 25.3669H6.99141C7.57462 25.3926 8.15499 25.2733 8.67851 25.0199C9.20203 24.7666 9.65169 24.3876 9.98563 23.9181L9.99371 23.907C10.7152 22.8998 11.0867 21.6916 11.0532 20.4613V20.4676C11.0222 19.1189 10.7031 17.7915 10.1164 16.5712C9.52974 15.3509 8.68852 14.2648 7.6471 13.3831L7.63418 13.3721C6.65726 12.5049 5.39077 12.0178 4.07308 12.0023H4.06985L4.06339 12.0039Z" fill="#003459"/>
@@ -868,12 +890,12 @@
                     <p class="content-banner-3 cont-bann-3">Adopt a pet and give it a home, it will be love you back unconditionally.
                     </p>
 
-                    <div class="button button-banner button-banner-main-2">
+                    <div class="button button-banner button-banner-main-2 d-flex">
                         <!-- Link to explore -->
                         <a href="#" class="explore-now">Explore Now</a>
 
                         <!-- Turn on one video -->
-                        <button type="button" class="view-intro view-intro-mobile">View Intro
+                        <button type="button" class="view-intro view-intro-mobile d-flex jc-center">View Intro
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                                 <path d="M10 9V15L15 12L10 9Z" fill="#003459" stroke="#003459" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg> 
@@ -891,16 +913,16 @@
         <!-- Card Blog List -->
         <section class="section margin-block-large section-blog-post-list">
             <div class="container container-blog-post-list">
-                <div class="section-header">
-                    <div class="section-heading">
+                <div class="section-header d-flex f-wrap jc-space-between">
+                    <div class="section-heading jc-start">
                         <span class="subheading">
                             You already know ?
                         </span>
                         <h2 class="heading">Useful pet knowledge</h2>
                     </div>
 
-                    <div class="section-header__view-more section-header__view-more-desktop">
-                        <a class="button button-view-more" href="#">
+                    <div class="section-header__view-more section-header__view-more-desktop jc-center">
+                        <a class="button button-view-more d-flex jc-center" href="#">
                             <span class="button-title">View more</span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                                     <path d="M8.33398 6.66669L11.6673 10L8.33398 13.3334" stroke="#003459" stroke-width="1.5" stroke-linecap="round"
@@ -912,14 +934,14 @@
 
                 <div class="section-content">
                     <div class="grid grid-desktop-3-items grid-tablet-3-items grid-mobile-3-items">
-                        <div class="grid__item">
+                        <div class="grid__item grid-item-blog">
                             <div class="card card-article">
                                 <div class="card__media">
-                                    <img class="card__image" src="./src/images/blog-pet-knowledge/image25.png" alt="Phốc sóc giống cún bắc kinh">
+                                    <img class="card__image d-block" src="./src/images/blog-pet-knowledge/image25.png" alt="Phốc sóc giống cún bắc kinh">
                                 </div>
 
                                 <div class="card-body card-body-blog">
-                                    <span class="blog-tag">
+                                    <span class="blog-tag d-inline-block">
                                         Pet knowledge
                                     </span>
                                     <h3 class="card-heading card-blog-heading">
@@ -932,14 +954,14 @@
                             </div>
                         </div>
 
-                        <div class="grid__item">
+                        <div class="grid__item grid-item-blog">
                             <div class="card card-article">
                                 <div class="card__media">
-                                    <img class="card__image" src="./src/images/blog-pet-knowledge/image26.png" alt="Samoyed trắng lông xù">
+                                    <img class="card__image d-block" src="./src/images/blog-pet-knowledge/image26.png" alt="Samoyed trắng lông xù">
                                 </div>
 
                                 <div class="card-body card-body-blog">
-                                    <span class="blog-tag">
+                                    <span class="blog-tag d-inline-block">
                                         Pet knowledge
                                     </span>
                                     <h3 class="card-heading card-blog-heading">
@@ -952,14 +974,14 @@
                             </div>
                         </div>
 
-                        <div class="grid__item">
+                        <div class="grid__item grid-item-blog">
                             <div class="card card-article">
                                 <div class="card__media">
-                                    <img class="card__image" src="./src/images/blog-pet-knowledge/image27.png" alt="Doggy man">
+                                    <img class="card__image d-block" src="./src/images/blog-pet-knowledge/image27.png" alt="Doggy man">
                                 </div>
 
                                 <div class="card-body card-body-blog">
-                                    <span class="blog-tag">
+                                    <span class="blog-tag d-inline-block">
                                         Pet knowledge
                                     </span>
                                     <h3 class="card-heading card-blog-heading">
@@ -976,8 +998,8 @@
                 </div>
 
                 <!-- Button view-more-mobile -->
-                <div class="section-header__view-more section-header__view-more-mobile">
-                    <a class="button button-view-more" href="#">
+                <div class="section-header__view-more section-header__view-more-mobile d-none jc-center">
+                    <a class="button button-view-more d-flex jc-center" href="#">
                         <span>View more</span>
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                             <path d="M8.33398 6.66669L11.6673 10L8.33398 13.3334" stroke="#003459" stroke-width="1.5" stroke-linecap="round"
@@ -993,26 +1015,26 @@
     <!-- Footer -->
     <footer>
         <section class="section section-footer">
-            <div class="container container-footer">
-                <div class="register-contact">
-                    <div class="register-form">
+            <div class="container container-footer d-flex f-direction-col">
+                <div class="register-contact d-flex f-direction-col">
+                    <div class="register-form d-flex">
                         <h2 class="cont-form-register">Register now so you don't miss our programs</h2>
 
-                        <form class="form-your-email" action="# ">
-                            <input type="email" class="input-email" name="email" placeholder="Enter your Email" required>
-                            <button type="button" class="btn-subcribe">Subcribe Now</button>
+                        <form class="form-your-email d-flex jc-space-between" action="">
+                            <input type="email" class="input-email d-flex" name="email" placeholder="Enter your Email" required>
+                            <button type="button" class="btn-subcribe d-flex jc-center">Subcribe Now</button>
                         </form>
                     </div>
 
-                    <div class="info-contact">
-                        <div class="info">
-                            <a href="#">Home</a>
-                            <a href="#">Category</a>
-                            <a href="#">About</a>
-                            <a href="#">Contact</a>
+                    <div class="info-contact d-flex f-wrap jc-space-between">
+                        <div class="info d-flex">
+                            <a class="info-content" href="#">Home</a>
+                            <a class="info-content" href="#">Category</a>
+                            <a class="info-content" href="#">About</a>
+                            <a class="info-content" href="#">Contact</a>
                         </div>
 
-                        <div class="contact">
+                        <div class="contact d-flex">
                             <a href="#" target="_blank"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                                 <g clip-path="url(#clip0_990_1660)">
                                 <path d="M24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 17.9895 4.3882 22.954 10.125 23.8542V15.4688H7.07812V12H10.125V9.35625C10.125 6.34875 11.9166 4.6875 14.6576 4.6875C15.9701 4.6875 17.3438 4.92188 17.3438 4.92188V7.875H15.8306C14.34 7.875 13.875 8.80008 13.875 9.75V12H17.2031L16.6711 15.4688H13.875V23.8542C19.6118 22.954 24 17.9895 24 12Z" fill="#00171F"/>
@@ -1055,16 +1077,16 @@
                     </div>
                 </div>
 
-                <div class="content-footer">
-                    <div class="cont-footer-nth">© 2022 Monito. All rights reserved.</div>
+                <div class="content-footer d-flex f-wrap jc-space-between">
+                    <div class="coppyright">© 2022 Monito. All rights reserved.</div>
 
-                    <div class="logo cont-footer-nth">
-                        <a href="#"><img src="./src/images/svg/Logo.svg" alt="Monito"></a>
+                    <div class="logo logo-footer">
+                        <a class="img-logo" href="#"><img src="./src/images/svg/Logo.svg" alt="Monito"></a>
                     </div>
 
-                    <div class="terms-privacy cont-footer-nth">
-                        <p>Terms of Service</p>
-                        <p>Privacy Policy</p>
+                    <div class="terms-privacy d-flex">
+                        <a class="terms-privacy-content" href="#">Terms of Service</a>
+                        <a class="terms-privacy-content" href="#">Privacy Policy</a>
                     </div>
                 </div>
 
