@@ -1,6 +1,6 @@
 /* các khối bao toàn bộ nội dung của từng phần*/
 
-.margin-block-large {
+.section--card-product {
     margin-block: 60px;
 }
 
@@ -44,7 +44,7 @@ img {
 
 .grid-item-blog {
     /* flex: 1 0 auto; */
-    flex: 1 0 364px;
+    flex: 1 0 164px;
 }
 
 
@@ -78,10 +78,10 @@ img {
     .grid-tablet-3-items .grid__item {
         width: calc(100%/3);
     } */
-    .section-banner-header {
+    .section--banner-header {
         background-image: url("../images/banner/header-banner.png");
     }
-    .banner-main-bg-1 {
+    .background-banner-1 {
         background-image: url("../images/banner/main-banner.png");
     }
 }
@@ -110,9 +110,6 @@ img {
 @media (max-width: 1200px) {
     .content-banner-main {
         padding-inline: 21px;
-    }
-    .cubic-image-banner-header img {
-        margin-left: -175px;
     }
 }
 
@@ -156,33 +153,31 @@ img {
     .header__search {
         order: 3;
     }
-    .container-header {
+    .container--header {
         justify-content: space-between;
         padding-inline: 10px 14px;
-    }
-    .cubic-image-banner-header img {
-        margin-left: -75px;
     }
 }
 
 @media (max-width:1024px) {
-    .grid-tablet-banner-2-iteams {
+    .container--banner-main {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .container--banner-header {
         grid-template-columns: repeat(1, 1fr);
     }
     .content-banner-header {
         padding-block: 100px 25px;
     }
-    .cubic-image-banner-header img {
-        width: 414px;
-        height: 386px;
+    .img-banner-header {
+        max-width: 290px;
+        width: 100%;
+        transform: translateX(18%);
     }
-    .section-banner-header {
+    .section--banner-header {
         background-image: url("../images/banner/header-banner-mobile.png");
     }
-    .cubic-image-banner-header img {
-        margin-left: unset;
-    }
-    .banner-main-bg-1 {
+    .background-banner-1 {
         background-image: url("../images/banner/main-banner-mobile.png");
     }
     .location-element-mobile:nth-child(1) {
@@ -195,17 +190,13 @@ img {
         padding-block: 32px;
         text-align: center;
     }
-    .content-banner-main-1 {
-        justify-content: center;
-    }
-    .content-banner-main-2 {
-        justify-content: center;
-    }
-    .image-bann-main-1 {
-        width: 524px;
+    .img-banner-main {
+        /* max-width: 320px; */
+        width: 100%;
         height: 349px;
+        padding-left: unset;
     }
-    .button-banner {
+    .button-groups {
         justify-content: space-between;
     }
     .button-banner-header {
@@ -230,10 +221,10 @@ img {
 }
 
 @media (max-width:992px) {
-    .btn-join {
+    .button-header {
         display: none;
     }
-    .nation__dropdown {
+    .nation-dropdown {
         display: none;
     }
 }
@@ -242,14 +233,14 @@ img {
     .search {
         width: unset;
     }
-    .search input[type="search"] {
+    .input-search {
         display: none;
     }
     .search {
         padding: 0;
         background-color: unset;
     }
-    .search button[type="submit"] {
+    .btn-search {
         font-size: 23px;
         padding: 2px;
         color: #003459;
@@ -314,22 +305,25 @@ img {
 /* Responsive mobile */
 
 @media (max-width:576px) {
-    .content-banner-1 {
+    .heading-mobile-large {
         font-size: 46px;
         line-height: 1.3;
     }
-    .content-banner-2 {
+    .sub-heading-mobile-header {
         font-size: 28px;
         line-height: 1.35;
         margin-top: unset;
     }
-    .content-banner-3 {
+    .primary-mobile-text {
         max-width: 382px;
         font-size: 12px;
         line-height: 1.5;
         margin-block: 12px 32px;
     }
-    .button-banner {
+    .secondary-mobile-text {
+        max-width: 342px;
+    }
+    .button-groups {
         gap: 16px;
     }
     .view-intro-mobile {
@@ -349,10 +343,10 @@ img {
         font-size: 14px;
         line-height: 1.43;
     }
-    .heading {
+    /* .heading {
         font-size: 20px;
         line-height: 1.6;
-    }
+    } */
     .card-heading {
         font-size: 14px;
         line-height: 1.43;
@@ -405,7 +399,7 @@ img {
     .card-product {
         padding: 8px;
     }
-    .section-our-products {
+    .section--our-products {
         display: none;
     }
     .section-pet-seller {

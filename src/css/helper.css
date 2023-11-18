@@ -1,7 +1,8 @@
 /* =======HELPER======== */
 
 
-/* ====DISPLAY==== */
+/* ====FLEXBOX CONTAINER==== 
+   ====DISPLAY==== */
 
 .d-block {
     display: block;
@@ -62,4 +63,112 @@
 
 .jc-space-between {
     justify-content: space-between;
+}
+
+.jc-space-around {
+    justify-content: space-around;
+}
+
+.jc-space-evenly {
+    justify-content: space-evenly;
+}
+
+
+/* ====ALIGN-ITEM===== */
+
+.alt-start {
+    align-items: flex-start;
+}
+
+.alt-center {
+    align-items: center;
+}
+
+.alt-end {
+    align-items: flex-end;
+}
+
+
+/* ====ALIGN-CONTENT===== */
+
+.alc-start {
+    align-content: flex-start;
+}
+
+.alc-end {
+    align-content: flex-end;
+}
+
+.alc-center {
+    align-content: center;
+}
+
+.alc-space-between {
+    align-content: space-between;
+}
+
+.alc-space-around {
+    align-content: space-around;
+}
+
+
+/* ====FLEXBOX ITEM==== 
+   ====ALIGN-SELF==== */
+
+.als-start {
+    align-self: self-start;
+}
+
+.als-end {
+    align-self: self-end;
+}
+
+.als-end {
+    align-self: center;
+}
+
+
+/* ====POSITION==== */
+
+.p-relative {
+    position: relative;
+}
+
+.p-absolute {
+    position: absolute;
+}
+
+
+/* ====BACKGROUND-IMAGES==== */
+
+.bg-images {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+/* ====OVER-FLOW==== */
+
+.o-hidden {
+    overflow: hidden;
+}
+
+.o-visible {
+    overflow: visible;
+}
+
+.o-scroll {
+    overflow: scroll;
+}
+
+.o-auto {
+    overflow: auto;
+}
+
+
+/* ====CURSOR:POINTER==== */
+
+.c-pointer {
+    cursor: pointer;
 }
