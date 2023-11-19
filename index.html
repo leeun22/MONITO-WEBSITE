@@ -20,16 +20,16 @@
             </div>
 
             <div class="menu">
-                <button type="button" class="bar-menu tablet-menu-block d-none" onclick="openNav()"> 
+                <button type="button" class="bar-menu tablet-menu-block d-none b-none" onclick="openNav()"> 
                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="33" viewBox="0 0 32 33" fill="none">
                         <path d="M6.66602 23.1666H25.3327M6.66602 16.4999H25.3327M6.66602 9.83325H25.3327" stroke="#00171F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                 </button>
 
                 <nav id="mySidenav" class="sidenav tablet-menu-block">
-                    <button type="button" class="closebtn d-none p-absolute" id="btnCloseNav" onclick="closeNav()">&times;</button>
+                    <button type="button" class="closebtn d-none p-absolute b-none" id="btnCloseNav" onclick="closeNav()">&times;</button>
 
-                    <ul class="nav__list-menu d-flex o-flow">
+                    <ul class="nav__list-menu d-flex o-hidden">
                         <li class="nav__items-menu">
                             <a href="#" class="nav__link-menu d-block primary-text">Home</a>
                         </li>
@@ -48,9 +48,9 @@
 
             <div class="header__search d-flex alt-center">
                 <div class="search">
-                    <form class="form__search d-flex alt-center secondary-text" action="">
-                        <input type="search" placeholder="Search something here!" name="search" class="input-search secondary-text">
-                        <button type="submit" class="btn-search">
+                    <form class="form__search d-flex alt-center secondary-text" action="#">
+                        <input type="search" placeholder="Search something here!" name="search" class="input-search secondary-text b-none ol-none">
+                        <button type="submit" class="btn-search c-pointer b-none bg-none ol-none">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                                 <path d="M18.0909 16.9083L14.9992 13.8416C16.1993 12.3453 16.7804 10.446 16.6232 8.53434C16.466 6.62267 15.5822 4.84391 14.1538 3.56379C12.7253 2.28368 10.8607 1.59951 8.94329 1.65198C7.02589 1.70445 5.20146 2.48956 3.84514 3.84587C2.48882 5.20219 1.70371 7.02662 1.65125 8.94402C1.59878 10.8614 2.28294 12.7261 3.56306 14.1545C4.84317 15.583 6.62194 16.4667 8.5336 16.6239C10.4453 16.7812 12.3445 16.2 13.8409 14.9999L16.9075 18.0666C16.985 18.1447 17.0772 18.2067 17.1787 18.249C17.2803 18.2913 17.3892 18.3131 17.4992 18.3131C17.6092 18.3131 17.7181 18.2913 17.8197 18.249C17.9212 18.2067 18.0134 18.1447 18.0909 18.0666C18.2411 17.9112 18.325 17.7035 18.325 17.4874C18.325 17.2713 18.2411 17.0636 18.0909 16.9083ZM9.16585 14.9999C8.01213 14.9999 6.88432 14.6578 5.92503 14.0168C4.96574 13.3759 4.21807 12.4648 3.77656 11.3989C3.33505 10.333 3.21953 9.16012 3.44461 8.02856C3.66969 6.89701 4.22526 5.8576 5.04106 5.0418C5.85687 4.22599 6.89627 3.67042 8.02783 3.44534C9.15938 3.22026 10.3323 3.33578 11.3982 3.77729C12.4641 4.2188 13.3751 4.96647 14.0161 5.92576C14.6571 6.88505 14.9992 8.01286 14.9992 9.16659C14.9992 10.7137 14.3846 12.1974 13.2906 13.2914C12.1967 14.3853 10.713 14.9999 9.16585 14.9999Z" fill="#667479"/>
                             </svg>
@@ -63,7 +63,7 @@
                 </a>
 
                 <div class="nation-dropdown d-inline-block p-relative">
-                    <button type="button" onclick="myFunction()" class="button__dropdown secondary-text-mobile d-flex alt-center">
+                    <button type="button" onclick="myFunction()" class="button__dropdown primary-text d-flex alt-center c-pointer b-none bg-none">
                         <span class="flag">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                                 <g clip-path="url(#clip0_990_1006)">
@@ -87,7 +87,7 @@
                         </svg>
                     </button>
 
-                    <div id="myDropdown" class="dropdown-content d-none p-absolute">
+                    <div id="myDropdown" class="dropdown-content primary-text d-none p-absolute">
                         <ul class="nav__list-language">
                             <li class="nav__item-language">
                                 <a class="nav__link-language d-block" href="#">English</a>
@@ -106,17 +106,17 @@
 
     <main>
         <!-- Section Header Banner -->
-        <section class="section--banner-header o-flow d-flex jc-center">
+        <section class="section--banner-header d-flex jc-center o-hidden">
             <div class="container container--banner-header d-grid alt-end">
                 <div class="grid__content content-banner-header">
-                    <h1 class="heading heading-large-header heading-mobile-large">One more friend</h1>
+                    <h1 class="heading heading-large-header heading-mobile-large-header">One more friend</h1>
                     <p class="heading sub-heading-header sub-heading-mobile-header">Thousands more fun!</p>
-                    <p class="text-content primary-text primary-text-desktop primary-mobile-text">Having a pet means you have more joy, a new friend, a happy person who will always be with you to have fun. We have 200+ different pets that can meet your needs!
+                    <p class="text-content-banner primary-text third-text-mobile text-cont-bann-header-3">Having a pet means you have more joy, a new friend, a happy person who will always be with you to have fun. We have 200+ different pets that can meet your needs!
                     </p>
 
                     <div class="button-groups button-banner-header d-flex">
                         <!-- Turn on one video -->
-                        <button type="button" class="button button--outline d-flex alt-center jc-center">
+                        <button type="button" class="button button--outline d-flex alt-center jc-center c-pointer">
                             <span class="button-title">View Intro</span>
                             <svg class="button-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                                 <path d="M10 9V15L15 12L10 9Z" fill="#003459" stroke="#003459" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -139,17 +139,17 @@
         <!-- Card New Product List -->
         <section class="section--card-product">
             <div class="container container-product-list">
-                <div class="section-header d-flex f-wrap jc-space-between">
+                <div class="section-header d-flex f-wrap jc-space-between alt-center">
                     <div class="section-heading">
-                        <span class="subheading">
+                        <span class="subheading primary-text secondary-text-mobile">
                             Whats new?
                         </span>
-                        <h2 class="heading heading-small">Take a look at some of our pets</h2>
+                        <h2 class="heading heading-small heading-small-mobile c-pointer"><a href="#">Take a look at some of our pets</a></h2>
                     </div>
 
-                    <div class="section-header__view-more section-header__view-more-desktop d-inline-flex jc-center">
+                    <div class="section-header__view-more section-header__view-more-desktop d-inline-flex">
                         <a class="button button--outline d-flex jc-center alt-center" href="#">
-                            <span>View more</span>
+                            <span class="secondary-text primary-text-mobile">View more</span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                                     <path d="M8.33398 6.66669L11.6673 10L8.33398 13.3334" stroke="#003459" stroke-width="1.5" stroke-linecap="round"
                                         stroke-linejoin="round" />
@@ -158,28 +158,26 @@
                     </div>
                 </div>
 
-                <div class="section--card ">
-                    <div class="grid grid-desktop-4-items grid-tablet-4-items grid-mobile-4-items">
-                        <div class="grid__item grid__item_product">
+                <div class="section--card">
+                    <div class="grid d-flex f-wrap">
+                        <div class="grid__item grid__item_product o-hidden">
                             <div class="card card-product d-grid">
-                                <div class="card__media card__media-product o-flow">
+                                <div class="card__media card__media-product o-hidden c-pointer">
                                     <img src="./src/images/new-products/image1.png" alt="Phốc sóc trắng">
                                 </div>
 
                                 <div class="card-body card-body-product">
-                                    <h3 class="card-heading card-product-list-heading">
-                                        <a class="card-title" href="#">MO231 - Pomeranian White</a>
+                                    <h3 class="card-heading">
+                                        <a class="text-content-main primary-text secondary-text-mobile" href="#">MO231 - Pomeranian White</a>
                                     </h3>
 
-                                    <div class="product-info d-flex">
+                                    <div class="product-info d-flex jc-start alt-center">
                                         <div class="product-info-title">
                                             <span class="pro-font-light">Gene:</span>
                                             <span class="product-info-title-bold">Male</span>
                                         </div>
 
-                                        <div class="dot-grey">
-                                            <div class="dot-dot-gr"></div>
-                                        </div>
+                                        <span class="dot-grey"></span>
 
                                         <div class="product-info-attribute">
                                             <span class="pro-font-light">Age:</span>
@@ -187,34 +185,32 @@
                                         </div>
                                     </div>
 
-                                    <div class="product-price">
+                                    <div class="text-content-main secondary-text primary-text-mobile">
                                         6.900.000 VND
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="grid__item grid__item_product">
+                        <div class="grid__item grid__item_product o-hidden">
                             <div class="card card-product d-grid">
-                                <div class="card__media card__media-product">
-                                    <img class="card__image d-block" src="./src/images/new-products/image2.png" alt="Phốc sóc trắng">
+                                <div class="card__media card__media-product o-hidden c-pointer">
+                                    <img class="card__image d-block" src="./src/images/new-products/image2.png" alt="Poodle Tiny Vàng">
                                 </div>
 
                                 <div class="card-body card-body-product">
                                     <h3 class="card-heading card-product-list-heading">
-                                        <a class="card-title" href="#">MO231 - Pomeranian White</a>
+                                        <a class="text-content-main primary-text secondary-text-mobile" href="#">MO502 - Poodle Tiny Yellow</a>
                                     </h3>
 
 
-                                    <div class="product-info d-flex">
+                                    <div class="product-info d-flex jc-start alt-center">
                                         <div class="product-info-title">
                                             <span class="pro-font-light">Gene:</span>
-                                            <span class="product-info-title-bold">Male</span>
+                                            <span class="product-info-title-bold">Female</span>
                                         </div>
 
-                                        <div class="dot-grey">
-                                            <div class="dot-dot-gr"></div>
-                                        </div>
+                                        <span class="dot-grey"></span>
 
                                         <div class="product-info-attribute">
                                             <span class="pro-font-light">Age:</span>
@@ -222,33 +218,31 @@
                                         </div>
                                     </div>
 
-                                    <div class="product-price">
-                                        6.900.000 VND
+                                    <div class="text-content-main secondary-text primary-text-mobile">
+                                        3.900.000 VND
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="grid__item grid__item_product">
+                        <div class="grid__item grid__item_product o-hidden">
                             <div class="card card-product d-grid">
-                                <div class="card__media card__media-product">
-                                    <img class="card__image d-block" src="./src/images/new-products/image3.png" alt="Phốc sóc trắng">
+                                <div class="card__media card__media-product o-hidden c-pointer">
+                                    <img class="card__image d-block" src="./src/images/new-products/image3.png" alt="Poodle tiny nâu đỏ">
                                 </div>
 
                                 <div class="card-body card-body-product">
                                     <h3 class="card-heading card-product-list-heading">
-                                        <a class="card-title" href="#">MO231 - Pomeranian White</a>
+                                        <a class="text-content-main primary-text secondary-text-mobile" href="#">MO102 - Poodle Tiny Sepia</a>
                                     </h3>
 
-                                    <div class="product-info d-flex">
+                                    <div class="product-info d-flex jc-start alt-center">
                                         <div class="product-info-title">
                                             <span class="pro-font-light">Gene:</span>
                                             <span class="product-info-title-bold">Male</span>
                                         </div>
 
-                                        <div class="dot-grey">
-                                            <div class="dot-dot-gr"></div>
-                                        </div>
+                                        <span class="dot-grey"></span>
 
                                         <div class="product-info-attribute">
                                             <span class="pro-font-light">Age:</span>
@@ -256,33 +250,31 @@
                                         </div>
                                     </div>
 
-                                    <div class="product-price">
-                                        6.900.000 VND
+                                    <div class="text-content-main secondary-text primary-text-mobile">
+                                        4.000.000 VND
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="grid__item grid__item_product">
+                        <div class="grid__item grid__item_product o-hidden">
                             <div class="card card-product d-grid">
-                                <div class="card__media card__media-product">
-                                    <img class="card__image d-block" src="./src/images/new-products/image4.png" alt="Phốc sóc trắng">
+                                <div class="card__media card__media-product o-hidden c-pointer">
+                                    <img class="card__image d-block" src="./src/images/new-products/image4.png" alt="Alaska Xám Trắng">
                                 </div>
 
                                 <div class="card-body card-body-product">
                                     <h3 class="card-heading card-product-list-heading">
-                                        <a class="card-title" href="#">MO231 - Pomeranian White</a>
+                                        <a class="text-content-main primary-text secondary-text-mobile" href="#">MO512 - Alaskan Malamute Grey</a>
                                     </h3>
 
-                                    <div class="product-info d-flex">
+                                    <div class="product-info d-flex jc-start alt-center">
                                         <div class="product-info-title">
                                             <span class="pro-font-light">Gene:</span>
                                             <span class="product-info-title-bold">Male</span>
                                         </div>
 
-                                        <div class="dot-grey">
-                                            <div class="dot-dot-gr"></div>
-                                        </div>
+                                        <span class="dot-grey"></span>
 
                                         <div class="product-info-attribute">
                                             <span class="pro-font-light">Age:</span>
@@ -290,34 +282,32 @@
                                         </div>
                                     </div>
 
-                                    <div class="product-price">
-                                        6.900.000 VND
+                                    <div class="text-content-main secondary-text primary-text-mobile">
+                                        8.900.000 VND
                                     </div>
                                 </div>
 
                             </div>
                         </div>
 
-                        <div class="grid__item grid__item_product">
+                        <div class="grid__item grid__item_product o-hidden">
                             <div class="card card-product d-grid">
-                                <div class="card__media card__media-product">
-                                    <img src="./src/images/new-products/image5.png" alt="Phốc sóc trắng">
+                                <div class="card__media card__media-product o-hidden c-pointer">
+                                    <img src="./src/images/new-products/image5.png" alt="Pembroke Welsh Corgi Vàng Trắng">
                                 </div>
 
                                 <div class="card-body card-body-product">
                                     <h3 class="card-heading card-product-list-heading">
-                                        <a class="card-title" href="#">MO231 - Pomeranian White</a>
+                                        <a class="text-content-main primary-text secondary-text-mobile" href="#">MO231 - Pembroke Corgi Cream</a>
                                     </h3>
 
-                                    <div class="product-info d-flex">
+                                    <div class="product-info d-flex jc-start alt-center">
                                         <div class="product-info-title">
                                             <span class="pro-font-light">Gene:</span>
                                             <span class="product-info-title-bold">Male</span>
                                         </div>
 
-                                        <div class="dot-grey">
-                                            <div class="dot-dot-gr"></div>
-                                        </div>
+                                        <span class="dot-grey"></span>
 
                                         <div class="product-info-attribute">
                                             <span class="pro-font-light">Age:</span>
@@ -325,33 +315,31 @@
                                         </div>
                                     </div>
 
-                                    <div class="product-price">
-                                        6.900.000 VND
+                                    <div class="text-content-main secondary-text primary-text-mobile">
+                                        7.900.000 VND
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="grid__item grid__item_product">
+                        <div class="grid__item grid__item_product o-hidden">
                             <div class="card card-product d-grid">
-                                <div class="card__media card__media-product">
-                                    <img src="./src/images/new-products/image6.png" alt="Phốc sóc trắng">
+                                <div class="card__media card__media-product o-hidden c-pointer">
+                                    <img src="./src/images/new-products/image6.png" alt="Pembroke Welsh Corgi Tricolor">
                                 </div>
 
                                 <div class="card-body card-body-product">
                                     <h3 class="card-heading card-product-list-heading">
-                                        <a class="card-title" href="#">MO231 - Pomeranian White</a>
+                                        <a class="text-content-main primary-text secondary-text-mobile" href="#">MO502 - Pembroke Corgi Tricolor</a>
                                     </h3>
 
-                                    <div class="product-info d-flex">
+                                    <div class="product-info d-flex jc-start alt-center">
                                         <div class="product-info-title">
                                             <span class="pro-font-light">Gene:</span>
-                                            <span class="product-info-title-bold">Male</span>
+                                            <span class="product-info-title-bold">Female</span>
                                         </div>
 
-                                        <div class="dot-grey">
-                                            <div class="dot-dot-gr"></div>
-                                        </div>
+                                        <span class="dot-grey"></span>
 
                                         <div class="product-info-attribute">
                                             <span class="pro-font-light">Age:</span>
@@ -359,33 +347,31 @@
                                         </div>
                                     </div>
 
-                                    <div class="product-price">
-                                        6.900.000 VND
+                                    <div class="text-content-main secondary-text primary-text-mobile">
+                                        9.000.000 VND
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="grid__item grid__item_product">
+                        <div class="grid__item grid__item_product o-hidden">
                             <div class="card card-product d-grid">
-                                <div class="card__media card__media-product">
-                                    <img src="./src/images/new-products/image7.png" alt="Phốc sóc trắng">
+                                <div class="card__media card__media-product o-hidden c-pointer">
+                                    <img src="./src/images/new-products/image7.png" alt="Cún phốc sóc thuần chủng">
                                 </div>
 
                                 <div class="card-body card-body-product">
                                     <h3 class="card-heading card-product-list-heading">
-                                        <a class="card-title" href="#">MO231 - Pomeranian White</a>
+                                        <a class="text-content-main primary-text secondary-text-mobile" href="#">MO231 - Pomeranian White</a>
                                     </h3>
 
-                                    <div class="product-info d-flex">
+                                    <div class="product-info d-flex jc-start alt-center">
                                         <div class="product-info-title">
                                             <span class="pro-font-light">Gene:</span>
-                                            <span class="product-info-title-bold">Male</span>
+                                            <span class="product-info-title-bold">Female</span>
                                         </div>
 
-                                        <div class="dot-grey">
-                                            <div class="dot-dot-gr"></div>
-                                        </div>
+                                        <span class="dot-grey"></span>
 
                                         <div class="product-info-attribute">
                                             <span class="pro-font-light">Age:</span>
@@ -393,33 +379,31 @@
                                         </div>
                                     </div>
 
-                                    <div class="product-price">
-                                        6.900.000 VND
+                                    <div class="text-content-main secondary-text primary-text-mobile">
+                                        6.500.000 VND
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="grid__item grid__item_product">
+                        <div class="grid__item grid__item_product o-hidden">
                             <div class="card card-product d-grid">
-                                <div class="card__media card__media-product">
-                                    <img src="./src/images/new-products/image8.png" alt="Phốc sóc trắng">
+                                <div class="card__media card__media-product o-hidden c-pointer">
+                                    <img src="./src/images/new-products/image8.png" alt="Poodle tiny bò sữa">
                                 </div>
 
                                 <div class="card-body card-body-product">
                                     <h3 class="card-heading card-product-list-heading">
-                                        <a class="card-title" href="#">MO231 - Pomeranian White</a>
+                                        <a class="text-content-main primary-text secondary-text-mobile" href="#">MO512 - Poodle Tiny Dairy Cow</a>
                                     </h3>
 
-                                    <div class="product-info d-flex">
+                                    <div class="product-info d-flex jc-start alt-center">
                                         <div class="product-info-title">
                                             <span class="pro-font-light">Gene:</span>
                                             <span class="product-info-title-bold">Male</span>
                                         </div>
 
-                                        <div class="dot-grey">
-                                            <div class="dot-dot-gr"></div>
-                                        </div>
+                                        <span class="dot-grey"></span>
 
                                         <div class="product-info-attribute">
                                             <span class="pro-font-light">Age:</span>
@@ -427,8 +411,8 @@
                                         </div>
                                     </div>
 
-                                    <div class="product-price">
-                                        6.900.000 VND
+                                    <div class="text-content-main secondary-text primary-text-mobile">
+                                        5.000.000 VND
                                     </div>
                                 </div>
                             </div>
@@ -451,49 +435,19 @@
         </section>
 
         <!-- Section Banner Main-->
-        <section class="section--banner-main d-flex jc-center">
-            <div class="container--banner-main o-flow background-banner-1 d-grid jc-space-between alt-end">
-                <div class="grid-image">
-                    <img src="./src/images/banner/main-banner-sm.png" alt="Girl and Puppy" class="img-banner-header">
-                </div>
-
-                <div class="grid__content content-banner-main content-banner-main-1 alt-center jc-center">
-                    <h1 class="heading heading-large-main heading-medium-main">One more friend</h1>
-                    <p class="heading heading-medium-main sub-heading-mobile-header">Thousands more fun!</p>
-                    <p class="text-content secondary-text secondary-text-desktop primary-mobile-text">Having a pet means you have more joy, a new friend, a happy person who will always be with you to have fun. We have 200+ different pets that can meet your needs!
-                    </p>
-
-                    <div class="button-groups button-banner-header d-flex">
-                        <!-- Turn on one video -->
-                        <button type="button" class="button button--outline d-flex alt-center jc-center">
-                            <span class="button-title">View Intro</span>
-                            <svg class="button-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                <path d="M10 9V15L15 12L10 9Z" fill="#003459" stroke="#003459" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg> 
-                        </button>
-
-                        <!-- Link to explore -->
-                        <a href="#" class="button button--primary alt-center">
-                            <span class="button-title">Explore Now</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="section--banner-main jc-center">
-            <div class="container--banner-main background-banner-1 d-grid jc-space-between alt-end">
-                <div class="grid-image">
+        <section class="section--banner-main section--banner-main-1">
+            <div class="container--banner-main background-banner-1 d-grid jc-space-between alt-end o-hidden">
+                <div class="grid-image grid-image-bann-main-1">
                     <img src="./src/images/banner/main-banner-sm.png" alt="Girl and Puppy" class="img-banner-main">
                 </div>
 
-                <div class="content content-banner-main content-banner-main-1 location-element-mobile d-grid jc-end">
-                    <h1 class="content-banner-1 cont-bann-1">One more friend</h1>
-                    <p class="content-banner-2 cont-bann-2">Thousands more fun!</p>
-                    <p class="content-banner-3 cont-bann-3">Having a pet means you have more joy, a new friend, a happy person who will always be with you to have fun. We have 200+ different pets that can meet your needs!
+                <div class="grid__content content-banner-main content-banner-main-1 d-grid alt-center jc-end">
+                    <h1 class="heading heading-extra-large heading-mobile-large">One more friend</h1>
+                    <p class="heading heading-medium heading-mobile-medium">Thousands more fun!</p>
+                    <p class="text-content-banner third-text text-cont-bann-main text-cont-bann-main-1">Having a pet means you have more joy, a new friend, a happy person who will always be with you to have fun. We have 200+ different pets that can meet your needs!
                     </p>
 
-                    <div class="button-groups d-flex jc-end">
+                    <div class="button-groups btn-group-banner-main d-flex jc-end">
                         <!-- Turn on one video -->
                         <button type="button" class="button button--outline d-flex alt-center jc-center">
                             <span class="button-title">View Intro</span>
@@ -508,22 +462,21 @@
                         </a>
                     </div>
                 </div>
-
             </div>
         </section>
 
         <!-- Card Our-Product -->
         <section class="section--card-product section--our-products">
             <div class="container container-our-products">
-                <div class="section-header d-flex f-wrap jc-space-between">
+                <div class="section-header d-flex f-wrap jc-space-between alt-center">
                     <div class="section-heading d-grid">
-                        <span class="subheading">
-                            Whats new?
+                        <span class="subheading primary-text secondary-text-mobile">
+                            Hard to choose right products for your pets?
                         </span>
-                        <h2 class="heading">Take a look at some of our pets</h2>
+                        <h2 class="heading heading-small heading-small-mobile c-pointer"><a href="#">Our Products</a></h2>
                     </div>
 
-                    <div class="section-header__view-more section-header__view-more-desktop d-inline-flex jc-center">
+                    <div class="section-header__view-more section-header__view-more-desktop d-inline-flex">
                         <a class="button button--outline d-flex jc-center alt-center" href="#">
                             <span>View more</span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
@@ -535,27 +488,25 @@
                 </div>
 
                 <div class="section--card">
-                    <div class="grid grid-desktop-4-items grid-tablet-4-items grid-mobile-4-items">
-                        <div class="grid__item grid__item_product">
+                    <div class="grid d-flex f-wrap">
+                        <div class="grid__item grid__item_product o-hidden">
                             <div class="card card-product d-grid">
-                                <div class="card__media card__media-product">
+                                <div class="card__media card__media-product o-hidden c-pointer">
                                     <img src="./src/images/our-products/image9.png" alt="Zealandia Salmon Pate Wet Dog Food">
                                 </div>
 
                                 <div class="card-body card-body-product">
                                     <h3 class="card-heading card-our-product-heading">
-                                        <a class="card-title" href="#">Reflex Plus Adult Cat Food Salmon</a>
+                                        <a class="text-content-main primary-text secondary-text-mobile" href="#">Reflex Plus Adult Cat Food Salmon</a>
                                     </h3>
 
-                                    <div class="product-info d-flex">
+                                    <div class="product-info d-flex jc-start alt-center">
                                         <div class="product-info-title">
                                             <span class="pro-font-light">Product:</span>
                                             <span class="product-info-title-bold">Dog Food</span>
                                         </div>
 
-                                        <div class="dot-grey">
-                                            <div class="dot-dot-gr"></div>
-                                        </div>
+                                        <span class="dot-grey"></span>
 
                                         <div class="product-info-attribute">
                                             <span class="pro-font-light">Size:</span>
@@ -563,167 +514,151 @@
                                         </div>
                                     </div>
 
-                                    <div class="product-price">
-                                        6.900.000 VND
+                                    <div class="text-content-main secondary-text primary-text-mobile">
+                                        140.000 VND
                                     </div>
 
-                                    <button type="button" class="product-gift d-flex">
+                                    <button type="button" class="product-gift d-flex alt-center c-pointer b-none">
                                         <img class="img-product-gift" src="./src/images/svg/Gift.svg" alt="gift icon">
-                                        <div class="dot-blue">
-                                            <div class="dot-dot-bl"></div>
-                                        </div>
-                                        <p class="cont-gift">Free Toy & Free Shaker</p>
+                                        <span class="dot-blue"></span>
+                                        <span class="cont-gift">Free Toy & Free Shaker</span>
                                     </button>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="grid__item grid__item_product">
+                        <div class="grid__item grid__item_product o-hidden">
                             <div class="card card-product d-grid">
-                                <div class="card__media card__media-product">
+                                <div class="card__media card__media-product o-hidden c-pointer">
                                     <img src="./src/images/our-products/image10.png" alt="gift icon">
                                 </div>
 
                                 <div class="card-body card-body-product">
                                     <h3 class="card-heading card-our-product-heading">
-                                        <a class="card-title" href="#">Reflex Plus Adult Cat Food Salmon</a>
+                                        <a class="text-content-main primary-text secondary-text-mobile" href="#">Reflex Plus Adult Cat Food Salmon</a>
                                     </h3>
 
-                                    <div class="product-info d-flex">
+                                    <div class="product-info d-flex jc-start alt-center">
                                         <div class="product-info-title">
                                             <span class="pro-font-light">Product:</span>
-                                            <span class="product-info-title-bold">Dog Food</span>
+                                            <span class="product-info-title-bold">Cat Food</span>
                                         </div>
 
-                                        <div class="dot-grey">
-                                            <div class="dot-dot-gr"></div>
-                                        </div>
+                                        <span class="dot-grey"></span>
 
                                         <div class="product-info-attribute">
                                             <span class="pro-font-light">Size:</span>
-                                            <span class="product-info-att-bold">385gm</span>
+                                            <span class="product-info-att-bold">1.5kg</span>
                                         </div>
                                     </div>
 
-                                    <div class="product-price">
-                                        6.900.000 VND
+                                    <div class="text-content-main secondary-text primary-text-mobile">
+                                        165.000 VND
                                     </div>
 
-                                    <div class="product-gift d-flex">
+                                    <button type="button" class="product-gift d-flex alt-center c-pointer b-none">
                                         <img class="img-product-gift" src="./src/images/svg/Gift.svg" alt="gift icon">
-                                        <div class="dot-blue">
-                                            <div class="dot-dot-bl"></div>
-                                        </div>
-                                        <p class="cont-gift">Free Toy & Free Shaker</p>
-                                    </div>
+                                        <span class="dot-blue"></span>
+                                        <span class="cont-gift">Free Toy & Free Shaker</span>
+                                    </button>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="grid__item grid__item_product">
+                        <div class="grid__item grid__item_product o-hidden">
                             <div class="card card-product d-grid">
-                                <div class="card__media card__media-product">
+                                <div class="card__media card__media-product o-hidden c-pointer">
                                     <img src="./src/images/our-products/image11.png" alt="gift icon">
                                 </div>
 
                                 <div class="card-body card-body-product">
                                     <h3 class="card-heading card-our-product-heading">
-                                        <a class="card-title" href="#">Reflex Plus Adult Cat Food Salmon</a>
+                                        <a class="text-content-main primary-text secondary-text-mobile" href="#">Cat scratching ball toy kitten sisal rope ball</a>
                                     </h3>
 
-                                    <div class="product-info d-flex">
+                                    <div class="product-info d-flex jc-start alt-center">
                                         <div class="product-info-title">
                                             <span class="pro-font-light">Product:</span>
-                                            <span class="product-info-title-bold">Dog Food</span>
+                                            <span class="product-info-title-bold">Toy</span>
                                         </div>
 
-                                        <div class="dot-grey">
-                                            <div class="dot-dot-gr"></div>
-                                        </div>
+                                        <!-- <span class="dot-grey"></span>
 
                                         <div class="product-info-attribute">
                                             <span class="pro-font-light">Size:</span>
                                             <span class="product-info-att-bold">385gm</span>
-                                        </div>
+                                        </div> -->
                                     </div>
 
-                                    <div class="product-price">
-                                        6.900.000 VND
+                                    <div class="text-content-main secondary-text primary-text-mobile">
+                                        1.100.000 VND
                                     </div>
 
-                                    <div class="product-gift d-flex">
+                                    <button type="button" class="product-gift d-flex alt-center c-pointer b-none">
                                         <img class="img-product-gift" src="./src/images/svg/Gift.svg" alt="gift icon">
-                                        <div class="dot-blue">
-                                            <div class="dot-dot-bl"></div>
-                                        </div>
-                                        <p class="cont-gift">Free Toy & Free Shaker</p>
-                                    </div>
+                                        <span class="dot-blue"></span>
+                                        <span class="cont-gift">Free Toy & Free Shaker</span>
+                                    </button>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="grid__item grid__item_product">
+                        <div class="grid__item grid__item_product o-hidden">
                             <div class="card card-product d-grid">
-                                <div class="card__media card__media-product">
+                                <div class="card__media card__media-product o-hidden c-pointer">
                                     <img src="./src/images/our-products/image12.png" alt="Nệm nằm cho mèo cá voi xám vải lông">
                                 </div>
 
                                 <div class="card-body card-body-product">
                                     <h3 class="card-heading card-our-product-heading">
-                                        <a class="card-title" href="#">Reflex Plus Adult Cat Food Salmon</a>
+                                        <a class="text-content-main primary-text secondary-text-mobile" href="#">Cute Pet Cat Warm Nest</a>
                                     </h3>
 
-                                    <div class="product-info d-flex">
+                                    <div class="product-info d-flex jc-start alt-center">
                                         <div class="product-info-title">
                                             <span class="pro-font-light">Product:</span>
-                                            <span class="product-info-title-bold">Dog Food</span>
+                                            <span class="product-info-title-bold">Toy</span>
                                         </div>
 
-                                        <div class="dot-grey">
-                                            <div class="dot-dot-gr"></div>
-                                        </div>
+                                        <!-- <span class="dot-grey"></span>
 
                                         <div class="product-info-attribute">
                                             <span class="pro-font-light">Size:</span>
                                             <span class="product-info-att-bold">385gm</span>
-                                        </div>
+                                        </div> -->
                                     </div>
 
-                                    <div class="product-price">
-                                        6.900.000 VND
+                                    <div class="text-content-main secondary-text primary-text-mobile">
+                                        410.000 VND
                                     </div>
 
-                                    <div class="product-gift d-flex">
+                                    <button type="button" class="product-gift d-flex alt-center c-pointer b-none">
                                         <img class="img-product-gift" src="./src/images/svg/Gift.svg" alt="gift icon">
-                                        <div class="dot-blue">
-                                            <div class="dot-dot-bl"></div>
-                                        </div>
-                                        <p class="cont-gift">Free Toy & Free Shaker</p>
-                                    </div>
+                                        <span class="dot-blue"></span>
+                                        <span class="cont-gift">Free Toy & Free Shaker</span>
+                                    </button>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="grid__item grid__item_product">
+                        <div class="grid__item grid__item_product o-hidden">
                             <div class="card card-product d-grid">
-                                <div class="card__media card__media-product">
+                                <div class="card__media card__media-product o-hidden c-pointer">
                                     <img src="./src/images/our-products/image13.png" alt="Neturvet Omega3">
                                 </div>
 
                                 <div class="card-body card-body-product">
                                     <h3 class="card-heading card-our-product-heading">
-                                        <a class="card-title" href="#">Reflex Plus Adult Cat Food Salmon</a>
+                                        <a class="text-content-main primary-text secondary-text-mobile" href="#">NaturVet Dogs - Omega-Gold Plus Salmon Oil</a>
                                     </h3>
 
-                                    <div class="product-info d-flex">
+                                    <div class="product-info d-flex jc-start alt-center">
                                         <div class="product-info-title">
                                             <span class="pro-font-light">Product:</span>
                                             <span class="product-info-title-bold">Dog Food</span>
                                         </div>
 
-                                        <div class="dot-grey">
-                                            <div class="dot-dot-gr"></div>
-                                        </div>
+                                        <span class="dot-grey"></span>
 
                                         <div class="product-info-attribute">
                                             <span class="pro-font-light">Size:</span>
@@ -731,41 +666,37 @@
                                         </div>
                                     </div>
 
-                                    <div class="product-price">
-                                        6.900.000 VND
+                                    <div class="text-content-main secondary-text primary-text-mobile">
+                                        350.000 VND
                                     </div>
 
-                                    <div class="product-gift d-flex">
+                                    <button type="button" class="product-gift d-flex alt-center c-pointer b-none">
                                         <img class="img-product-gift" src="./src/images/svg/Gift.svg" alt="gift icon">
-                                        <div class="dot-blue">
-                                            <div class="dot-dot-bl"></div>
-                                        </div>
-                                        <p class="cont-gift">Free Toy & Free Shaker</p>
-                                    </div>
+                                        <span class="dot-blue"></span>
+                                        <span class="cont-gift">Free Toy & Free Shaker</span>
+                                    </button>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="grid__item grid__item_product">
+                        <div class="grid__item grid__item_product o-hidden">
                             <div class="card card-product d-grid">
-                                <div class="card__media card__media-product">
+                                <div class="card__media card__media-product o-hidden c-pointer">
                                     <img src="./src/images/our-products/image14.png" alt="Trang phục cao bồi cưỡi ngựa cho cún con">
                                 </div>
 
                                 <div class="card-body card-body-product">
                                     <h3 class="card-heading card-our-product-heading">
-                                        <a class="card-title" href="#">Reflex Plus Adult Cat Food Salmon</a>
+                                        <a class="text-content-main primary-text secondary-text-mobile" href="#">Costumes Fashion Pet Clother Cowboy Rider</a>
                                     </h3>
 
-                                    <div class="product-info d-flex">
+                                    <div class="product-info d-flex jc-start alt-center">
                                         <div class="product-info-title">
                                             <span class="pro-font-light">Product:</span>
-                                            <span class="product-info-title-bold">Dog Food</span>
+                                            <span class="product-info-title-bold">Costume</span>
                                         </div>
 
-                                        <div class="dot-grey">
-                                            <div class="dot-dot-gr"></div>
-                                        </div>
+                                        <span class="dot-grey"></span>
 
                                         <div class="product-info-attribute">
                                             <span class="pro-font-light">Size:</span>
@@ -773,101 +704,91 @@
                                         </div>
                                     </div>
 
-                                    <div class="product-price">
-                                        6.900.000 VND
+                                    <div class="text-content-main secondary-text primary-text-mobile">
+                                        500.000 VND
                                     </div>
 
-                                    <div class="product-gift d-flex">
+                                    <button type="button" class="product-gift d-flex alt-center c-pointer b-none">
                                         <img class="img-product-gift" src="./src/images/svg/Gift.svg" alt="gift icon">
-                                        <div class="dot-blue">
-                                            <div class="dot-dot-bl"></div>
-                                        </div>
-                                        <p class="cont-gift">Free Toy & Free Shaker</p>
-                                    </div>
+                                        <span class="dot-blue"></span>
+                                        <span class="cont-gift">Free Toy & Free Shaker</span>
+                                    </button>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="grid__item grid__item_product">
+                        <div class="grid__item grid__item_product o-hidden">
                             <div class="card card-product d-grid">
-                                <div class="card__media card__media-product">
+                                <div class="card__media card__media-product o-hidden c-pointer">
                                     <img src="./src/images/our-products/image15.png" alt="Bờm tóc đùi gà cho thú cưng">
                                 </div>
 
                                 <div class="card-body card-body-product">
                                     <h3 class="card-heading card-our-product-heading">
-                                        <a class="card-title" href="#">Reflex Plus Adult Cat Food Salmon</a>
+                                        <a class="text-content-main primary-text secondary-text-mobile" href="#">Costumes Chicken Drumsti ck Headband</a>
                                     </h3>
 
-                                    <div class="product-info d-flex">
+                                    <div class="product-info d-flex jc-start alt-center">
                                         <div class="product-info-title">
                                             <span class="pro-font-light">Product:</span>
-                                            <span class="product-info-title-bold">Dog Food</span>
+                                            <span class="product-info-title-bold">Costume</span>
                                         </div>
 
-                                        <div class="dot-grey">
-                                            <div class="dot-dot-gr"></div>
-                                        </div>
+                                        <!-- <span class="dot-grey"></span>
 
                                         <div class="product-info-attribute">
                                             <span class="pro-font-light">Size:</span>
-                                            <span class="product-info-att-bold">385gm</span>
-                                        </div>
+                                            <span class="product-info-att-bold">1.5kg</span>
+                                        </div> -->
                                     </div>
 
-                                    <div class="product-price">
-                                        6.900.000 VND
+                                    <div class="text-content-main secondary-text primary-text-mobile">
+                                        400.000 VND
                                     </div>
 
-                                    <div class="product-gift d-flex">
+                                    <button type="button" class="product-gift d-flex alt-center c-pointer b-none">
                                         <img class="img-product-gift" src="./src/images/svg/Gift.svg" alt="gift icon">
-                                        <div class="dot-blue">
-                                            <div class="dot-dot-bl"></div>
-                                        </div>
-                                        <p class="cont-gift">Free Toy & Free Shaker</p>
-                                    </div>
+                                        <span class="dot-blue"></span>
+                                        <span class="cont-gift">Free Toy & Free Shaker</span>
+                                    </button>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="grid__item grid__item_product">
+                        <div class="grid__item grid__item_product o-hidden">
                             <div class="card card-product d-grid">
-                                <div class="card__media card__media-product">
+                                <div class="card__media card__media-product o-hidden c-pointer">
                                     <img src="./src/images/our-products/image16.png" alt="Thú nhồi bông bạch tuộc hồng">
                                 </div>
 
                                 <div class="card-body card-body-product">
                                     <h3 class="card-heading card-our-product-heading">
-                                        <a class="card-title" href="#">Reflex Plus Adult Cat Food Salmon</a>
+                                        <a class="text-content-main primary-text secondary-text-mobile" href="#">Plush Pet Toy</a>
                                     </h3>
 
-                                    <div class="product-info d-flex">
+                                    <div class="product-info d-flex jc-start alt-center jc-start alt-center jc-start alt-center">
                                         <div class="product-info-title">
                                             <span class="pro-font-light">Product:</span>
-                                            <span class="product-info-title-bold">Dog Food</span>
+                                            <span class="product-info-title-bold">Costume</span>
                                         </div>
 
-                                        <div class="dot-grey">
-                                            <div class="dot-dot-gr"></div>
-                                        </div>
+                                        <!-- <span class="dot-grey"></span>
 
                                         <div class="product-info-attribute">
                                             <span class="pro-font-light">Size:</span>
                                             <span class="product-info-att-bold">385gm</span>
-                                        </div>
+                                        </div> -->
                                     </div>
 
-                                    <div class="product-price">
-                                        6.900.000 VND
+                                    <div class="text-content-main secondary-text primary-text-mobile">
+                                        250.000 VND
                                     </div>
 
-                                    <div class="product-gift d-flex">
+                                    <button type="button" class="product-gift d-flex alt-center c-pointer b-none">
                                         <img class="img-product-gift" src="./src/images/svg/Gift.svg" alt="gift icon">
-                                        <div class="dot-blue">
-                                            <div class="dot-dot-bl"></div>
-                                        </div>
-                                        <p class="cont-gift">Free Toy & Free Shaker</p>
-                                    </div>
+                                        <span class="dot-blue"></span>
+                                        <span class="cont-gift">Free Toy & Free Shaker</span>
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -881,17 +802,17 @@
         <!-- Pet Seller -->
         <section class="section section-pet-seller">
             <div class="container container-pet-seller">
-                <div class="section-header d-flex f-wrap jc-space-between">
+                <div class="section-header d-flex f-wrap jc-space-between alt-center">
                     <div class="section-heading-pet-seller d-flex alt-center jc-space-between">
-                        <span class="subheading">
+                        <span class="subheading primary-text secondary-text-mobile">
                             Proud to be part of
                         </span>
-                        <h2 class="heading">Pet Sellers</h2>
+                        <h2 class="heading heading-small heading-small-mobile c-pointer"><a href="#">Pet Sellers</a></h2>
                     </div>
 
-                    <div class="section-header__view-more section-header__view-more-desktop d-inline-flex jc-center">
+                    <div class="section-header__view-more section-header__view-more-desktop d-inline-flex">
                         <a class="button button--outline d-flex jc-center alt-center" href="#">
-                            <span>View more</span>
+                            <span>View all our sellers</span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                                     <path d="M8.33398 6.66669L11.6673 10L8.33398 13.3334" stroke="#003459" stroke-width="1.5" stroke-linecap="round"
                                         stroke-linejoin="round" />
@@ -900,33 +821,33 @@
                     </div>
                 </div>
 
-                <div class="section-brand d-flex f-wrap">
-                    <img class="image-brand-1" src="./src/images/pet-sellers-brand/image17.png" alt="Seba Cat Food">
-                    <img class="image-brand-2" src="./src/images/pet-sellers-brand/image18.png" alt="Whiskas Adult Chicken">
-                    <img class="image-brand-3" src="./src/images/pet-sellers-brand/image19.png" alt="Bakers Dog Food">
-                    <img class="image-brand-4" src="./src/images/pet-sellers-brand/image20.png" alt="Thức ăn Felix cho mèo">
-                    <img class="image-brand-5" src="./src/images/pet-sellers-brand/image21.png" alt="Good Boy Pet Care">
-                    <img class="image-brand-6" src="./src/images/pet-sellers-brand/image22.png" alt="Butcher's Nourishing Food For Dog Cat">
-                    <img class="image-brand-7" src="./src/images/pet-sellers-brand/image23.png" alt="Petnus Vietnam">
+                <div class="section-brand d-flex f-wrap alt-center jc-space-around o-hidden">
+                    <img class="image-brand image-brand-1" src="./src/images/pet-sellers-brand/image17.png" alt="Seba Cat Food">
+                    <img class="image-brand image-brand-2" src="./src/images/pet-sellers-brand/image18.png" alt="Whiskas Adult Chicken">
+                    <img class="image-brand image-brand-3" src="./src/images/pet-sellers-brand/image19.png" alt="Bakers Dog Food">
+                    <img class="image-brand image-brand-4" src="./src/images/pet-sellers-brand/image20.png" alt="Thức ăn Felix cho mèo">
+                    <img class="image-brand image-brand-5" src="./src/images/pet-sellers-brand/image21.png" alt="Good Boy Pet Care">
+                    <img class="image-brand image-brand-6" src="./src/images/pet-sellers-brand/image22.png" alt="Butcher's Nourishing Food For Dog Cat">
+                    <img class="image-brand image-brand-7" src="./src/images/pet-sellers-brand/image23.png" alt="Petnus Vietnam">
                 </div>
             </div>
         </section>
 
         <!-- Section Banner Main 2 -->
-        <section class="section section-banner section-banner-main section-banner-main-2 jc-center">
-            <div class="container container-banner container-banner-main banner-main-bg-2 grid-tablet-banner-2-iteams d-grid jc-space-between">
-                <div class="content content-banner-main content-banner-main-2 jc-start">
+        <section class="section--banner-main section--banner-main-2">
+            <div class="container--banner-main background-banner-2 d-grid jc-space-between alt-start o-hidden">
+                <div class="grid__content content-banner-main content-banner-main-2 d-grid alt-center">
                     <div class="heading-cont-bann-main d-flex alt-center">
-                        <h1 class="content-banner-1 cont-bann-1">Adoption</h1>
+                        <h1 class="heading heading-extra-large heading-mobile-large">Adoption</h1>
                         <svg xmlns="http://www.w3.org/2000/svg" width="42" height="38" viewBox="0 0 42 38" fill="none">
                             <path d="M22.3146 8.51235V8.56143C22.3139 9.5215 22.4822 10.4745 22.8121 11.3785L22.7927 11.3199C23.1133 12.2007 23.6581 12.9867 24.3754 13.6032L24.3818 13.608C25.0618 14.2081 25.9662 14.5739 26.9578 14.5739H27.0353H27.0321C28.3403 14.5666 29.5932 14.0553 30.5205 13.1504C31.5335 12.2387 32.3216 11.1129 32.8251 9.85831L32.8461 9.79813C33.3341 8.61246 33.5911 7.34756 33.6036 6.06903V6.01361C33.6036 5.02552 33.4275 4.07701 33.1061 3.19659L33.1255 3.25518C32.8049 2.37433 32.2601 1.58836 31.5428 0.971801L31.5363 0.96705C30.8065 0.323216 29.853 -0.0223897 28.8716 0.00112587H28.8764C27.5678 0.00661014 26.3142 0.518173 25.388 1.42468C24.3851 2.33632 23.6036 3.45697 23.1011 4.70407L23.0801 4.76424C22.6134 5.87268 22.3372 7.16005 22.3227 8.5076V8.51235H22.3146ZM30.9469 20.4645L30.9452 20.5975C30.9433 21.7882 31.3186 22.9502 32.0192 23.9228L32.0063 23.9038C32.3258 24.3551 32.7519 24.7238 33.2483 24.9786C33.7447 25.2334 34.2965 25.3666 34.8568 25.3669L35.0167 25.3638H35.0086C36.3324 25.3495 37.6047 24.8593 38.5843 23.9861L38.5794 23.9909C39.6215 23.1158 40.4643 22.0357 41.0533 20.8207C41.6423 19.6057 41.9643 18.2829 41.9984 16.9381V16.9254L42 16.7955C42 15.5525 41.6027 14.3997 40.926 13.4544L40.9389 13.4734C40.6065 12.997 40.1556 12.6116 39.6287 12.3539C39.1019 12.0962 38.5167 11.9746 37.9286 12.0008H37.9366C36.6129 12.015 35.3405 12.5053 34.361 13.3784L34.3658 13.3736C33.3222 14.2539 32.4786 15.3392 31.8897 16.5593C31.3007 17.7794 30.9795 19.1071 30.9469 20.4566V20.4676V20.4645ZM20.9968 19.7962C18.6389 19.9224 16.3807 20.7703 14.54 22.2206L14.5626 22.2031C12.3094 23.7721 10.368 25.732 8.83413 27.986L8.78245 28.0668C7.39997 29.8879 6.59202 32.0662 6.45845 34.3326L6.45684 34.3643L6.45361 34.502C6.45361 35.1418 6.61349 35.7467 6.89612 36.2771L6.88643 36.2565C7.1576 36.743 7.58112 37.131 8.09446 37.3634L8.11061 37.3697C8.58058 37.5898 9.12806 37.7624 9.69978 37.859L9.73854 37.8638C10.3347 37.956 10.9374 38.0015 11.5409 38H11.662H11.6556C13.3196 37.892 14.9521 37.503 16.4812 36.8504L16.3875 36.8868C17.8316 36.2694 19.3711 35.8942 20.9419 35.7768L20.9919 35.7736C22.7733 35.9034 24.4238 36.2961 25.9581 36.9121L25.8499 36.8741C27.4497 37.5041 29.1433 37.8753 30.8645 37.973L30.9097 37.9746C33.9955 37.9767 35.5383 36.7738 35.5383 34.3659C35.4684 32.6786 34.9735 31.0346 34.0978 29.5806L34.1252 29.6281C33.1804 27.8858 31.9933 26.2807 30.598 24.8586L30.6045 24.865C29.2407 23.4684 27.6811 22.2693 25.9726 21.3037L25.8725 21.2515C24.4133 20.3588 22.7413 19.856 21.0226 19.7931H21.0032L20.9968 19.7962ZM14.9647 14.5755H15.039C15.9914 14.5765 16.9104 14.2312 17.6182 13.6064L17.6149 13.6096C18.3265 13.0021 18.8689 12.2273 19.1912 11.3579L19.2041 11.3199C19.5245 10.4343 19.6868 9.50111 19.6838 8.56143V8.50918V8.51235C19.6692 7.15847 19.3931 5.87268 18.9005 4.69457L18.9263 4.76424C18.4259 3.49609 17.6385 2.35584 16.6233 1.42943L16.6169 1.42468C15.6904 0.519718 14.4378 0.008873 13.1301 0.00270936H13.0542C12.0625 0.00270936 11.1581 0.370077 10.475 0.971801L10.4782 0.968634C9.77084 1.57511 9.22496 2.34468 8.90196 3.22035L8.88904 3.25835C8.58057 4.08493 8.40292 5.03977 8.40292 6.0342V6.06587V6.06428C8.41691 7.36974 8.68267 8.66081 9.1862 9.86939L9.16037 9.79972C9.66119 11.0748 10.4547 12.2197 11.4795 13.1456L11.486 13.152C12.4137 14.0546 13.6658 14.5641 14.9728 14.5708H14.9744L14.9647 14.5755ZM4.06339 12.0039L3.91481 12.0008C2.73423 12.0008 1.69255 12.5803 1.06916 13.4655L1.06108 13.4766C0.36726 14.4512 -0.00325012 15.6118 1.90735e-05 16.8003L0.00163651 16.9365V16.9301C0.0334435 18.2741 0.353107 19.5966 0.939892 20.8116C1.52668 22.0267 2.36747 23.1071 3.4077 23.983L3.42061 23.9941C4.39863 24.8639 5.6678 25.3523 6.98817 25.3669H6.99141C7.57462 25.3926 8.15499 25.2733 8.67851 25.0199C9.20203 24.7666 9.65169 24.3876 9.98563 23.9181L9.99371 23.907C10.7152 22.8998 11.0867 21.6916 11.0532 20.4613V20.4676C11.0222 19.1189 10.7031 17.7915 10.1164 16.5712C9.52974 15.3509 8.68852 14.2648 7.6471 13.3831L7.63418 13.3721C6.65726 12.5049 5.39077 12.0178 4.07308 12.0023H4.06985L4.06339 12.0039Z" fill="#003459"/>
                         </svg>
                     </div>
-                    <p class="content-banner-2 cont-bann-2">We need help. so do they.</p>
-                    <p class="content-banner-3 cont-bann-3">Adopt a pet and give it a home, it will be love you back unconditionally.
-                    </p>
 
-                    <div class="button-groups button-banner-header d-flex jc-start">
+                    <p class="heading heading-medium heading-mobile-medium heading-bann-main-2">We need help. so do they.</p>
+                    <p class="text-content-banner third-text text-cont-bann-main text-cont-bann-main-2">Adopt a pet and give it a home, it will be love you back unconditionally.</p>
+
+                    <div class="button-groups btn-group-banner-main d-flex">
                         <!-- Turn on one video -->
                         <button type="button" class="button button--outline d-flex alt-center jc-center">
                             <span class="button-title">View Intro</span>
@@ -942,25 +863,24 @@
                     </div>
                 </div>
 
-                <div class="cubic-image-banner-main">
-                    <img class="image-bann-main-2" src="./src/images/banner/main-banner-2-sm.png" alt="Puppy hand">
+                <div class="grid-image grid-image-bann-main-2">
+                    <img src="./src/images/banner/main-banner-2-sm.png" alt="Puppy hand" class="img-banner-main-2">
                 </div>
-
             </div>
         </section>
 
         <!-- Card Blog List -->
         <section class="section--card-product">
             <div class="container container-blog-post-list">
-                <div class="section-header d-flex alt-center f-wrap jc-space-between">
+                <div class="section-header d-flex alt-center f-wrap jc-space-between alt-center">
                     <div class="section-heading jc-start">
-                        <span class="subheading">
+                        <span class="subheading primary-text secondary-text-mobile">
                             You already know ?
                         </span>
-                        <h2 class="heading">Useful pet knowledge</h2>
+                        <h2 class="heading heading-small heading-small-mobile c-pointer"><a href="#">Useful pet knowledge</a></h2>
                     </div>
 
-                    <div class="section-header__view-more section-header__view-more-desktop d-inline-flex jc-center">
+                    <div class="section-header__view-more section-header__view-more-desktop d-inline-flex">
                         <a class="button button--outline d-flex jc-center alt-center" href="#">
                             <span>View more</span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
@@ -972,10 +892,10 @@
                 </div>
 
                 <div class="section--card">
-                    <div class="grid grid-desktop-3-items grid-tablet-3-items grid-mobile-3-items">
-                        <div class="grid__item grid-item-blog">
+                    <div class="grid d-flex f-wrap">
+                        <div class="grid__item grid__item-blog">
                             <div class="card card-article">
-                                <div class="card__media">
+                                <div class="card__media o-hidden c-pointer">
                                     <img class="card__image d-block" src="./src/images/blog-pet-knowledge/image25.png" alt="Phốc sóc giống cún bắc kinh">
                                 </div>
 
@@ -984,7 +904,7 @@
                                         Pet knowledge
                                     </span>
                                     <h3 class="card-heading card-blog-heading">
-                                        <a class="card-title" href="#">What is a Pomeranian? How to Identify Pomeranian Dogs</a>
+                                        <a class="text-content-main primary-text secondary-text-mobile" href="#">What is a Pomeranian? How to Identify Pomeranian Dogs</a>
                                     </h3>
                                     <p class="card-content card-content-heading">
                                         The Pomeranian, also known as the Pomeranian (Pom dog), is always in the top of the cutest pets. Not only that, the small, lovely, smart, friendly, and skillful circus dog breed.
@@ -993,9 +913,9 @@
                             </div>
                         </div>
 
-                        <div class="grid__item grid-item-blog">
+                        <div class="grid__item grid__item-blog">
                             <div class="card card-article">
-                                <div class="card__media">
+                                <div class="card__media o-hidden c-pointer">
                                     <img class="card__image d-block" src="./src/images/blog-pet-knowledge/image26.png" alt="Samoyed trắng lông xù">
                                 </div>
 
@@ -1004,18 +924,18 @@
                                         Pet knowledge
                                     </span>
                                     <h3 class="card-heading card-blog-heading">
-                                        <a class="card-title" href="#">What is a Pomeranian? How to Identify Pomeranian Dogs</a>
+                                        <a class="text-content-main primary-text secondary-text-mobile" href="#">Dog Diet You Need To Know</a>
                                     </h3>
                                     <p class="card-content">
-                                        The Pomeranian, also known as the Pomeranian (Pom dog), is always in the top of the cutest pets. Not only that, the small, lovely, smart, friendly, and skillful circus dog breed.
+                                        Dividing a dog's diet may seem simple at first, but there are some rules you should know so that your dog can easily absorb the nutrients in the diet. For those who are just starting to raise dogs, especially newborn puppies with relatively weak resistance.
                                     </p>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="grid__item grid-item-blog">
+                        <div class="grid__item grid__item-blog">
                             <div class="card card-article">
-                                <div class="card__media">
+                                <div class="card__media o-hidden c-pointer">
                                     <img class="card__image d-block" src="./src/images/blog-pet-knowledge/image27.png" alt="Doggy man">
                                 </div>
 
@@ -1024,10 +944,10 @@
                                         Pet knowledge
                                     </span>
                                     <h3 class="card-heading card-blog-heading">
-                                        <a class="card-title" href="#">What is a Pomeranian? How to Identify Pomeranian Dogs</a>
+                                        <a class="text-content-main primary-text secondary-text-mobile" href="#">Why Dogs Bite and Destroy Furniture and How to Prevent It Effectively</a>
                                     </h3>
                                     <p class="card-content">
-                                        The Pomeranian, also known as the Pomeranian (Pom dog), is always in the top of the cutest pets. Not only that, the small, lovely, smart, friendly, and skillful circus dog breed.
+                                        Dog bites are common during development. However, no one wants to see their furniture or important items being bitten by a dog.
                                     </p>
                                 </div>
                             </div>
@@ -1038,11 +958,11 @@
 
                 <!-- Button view-more-mobile -->
                 <div class="section-header__view-more section-header__view-more-mobile d-none jc-center">
-                    <a class="button button-view-more d-flex jc-center" href="#">
+                    <a class="button button--outline d-flex jc-center alt-center" href="#">
                         <span>View more</span>
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                            <path d="M8.33398 6.66669L11.6673 10L8.33398 13.3334" stroke="#003459" stroke-width="1.5" stroke-linecap="round"
-                                stroke-linejoin="round" />
+                                <path d="M8.33398 6.66669L11.6673 10L8.33398 13.3334" stroke="#003459" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
                         </svg>
                     </a>
                 </div>
@@ -1054,26 +974,26 @@
     <!-- Footer -->
     <footer>
         <section class="section section-footer">
-            <div class="container container-footer d-flex f-direction-col">
-                <div class="register-contact d-flex f-direction-col">
-                    <div class="register-form d-flex">
-                        <h2 class="cont-form-register">Register now so you don't miss our programs</h2>
+            <div class="container container-footer d-flex f-direction-col jc-end alt-start">
+                <div class="register-contact d-flex f-direction-col alt-start">
+                    <div class="register-form d-flex alt-start">
+                        <h2 class="heading heading-small cont-form-register heading-small-mobile c-pointer">Register now so you don't miss our programs</h2>
 
-                        <form class="form-your-email d-flex jc-space-between" action="">
-                            <input type="email" class="input-email d-flex" name="email" placeholder="Enter your Email" required>
-                            <button type="button" class="btn-subcribe d-flex jc-center">Subcribe Now</button>
+                        <form class="form-your-email d-flex jc-space-between alt-center" action="#">
+                            <input type="email" class="input-email d-flex alt-center ol-none" name="email" placeholder="Enter your Email" required>
+                            <button type="button" class="btn-subcribe d-flex jc-center alt-center c-pointer b-none">Subcribe Now</button>
                         </form>
                     </div>
 
-                    <div class="info-contact d-flex f-wrap jc-space-between">
-                        <div class="info d-flex">
+                    <div class="info-contact d-flex f-wrap jc-space-between alt-start">
+                        <div class="info d-flex alt-start">
                             <a class="info-content" href="#">Home</a>
                             <a class="info-content" href="#">Category</a>
                             <a class="info-content" href="#">About</a>
                             <a class="info-content" href="#">Contact</a>
                         </div>
 
-                        <div class="contact d-flex">
+                        <div class="contact d-flex alt-center">
                             <a href="#" target="_blank"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                                 <g clip-path="url(#clip0_990_1660)">
                                 <path d="M24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 17.9895 4.3882 22.954 10.125 23.8542V15.4688H7.07812V12H10.125V9.35625C10.125 6.34875 11.9166 4.6875 14.6576 4.6875C15.9701 4.6875 17.3438 4.92188 17.3438 4.92188V7.875H15.8306C14.34 7.875 13.875 8.80008 13.875 9.75V12H17.2031L16.6711 15.4688H13.875V23.8542C19.6118 22.954 24 17.9895 24 12Z" fill="#00171F"/>
@@ -1116,7 +1036,7 @@
                     </div>
                 </div>
 
-                <div class="content-footer d-flex f-wrap jc-space-between">
+                <div class="content-footer d-flex f-wrap jc-space-between alt-center">
                     <div class="coppyright">© 2022 Monito. All rights reserved.</div>
 
                     <div class="logo logo-footer c-pointer">

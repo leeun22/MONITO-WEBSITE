@@ -5,6 +5,7 @@
     --third-color: #242B33;
     --fourth-color: #00171F;
     --fifth-color: #667479;
+    --sixth-color: #000;
     --primary-font: 'SVN-Gilroy Light';
     --secondary-font: 'SVN-Gilroy Bold';
     --primary-transition: 0.5s ease;
@@ -22,13 +23,13 @@ html {
 
 body {
     font-family: var(--primary-font);
-    font-size: 16px;
     font-style: normal;
     font-weight: 700;
 }
 
 a {
     text-decoration: none;
+    color: unset;
 }
 
 
@@ -60,9 +61,14 @@ a {
     line-height: 1.5;
 }
 
-.text-product {
+.text-content-main {
     font-family: var(--secondary-font);
     color: var(--fourth-color);
+}
+
+.text-content-banner {
+    font-family: var(--primary-font);
+    color: var(--third-color);
 }
 
 .primary-text {
@@ -78,30 +84,6 @@ a {
 .third-text {
     font-size: 1.2rem;
     line-height: 1.5;
-}
-
-
-/* ====HEADING TEXT MOBILE==== */
-
-.heading-medium-mobile {
-    font-size: 2rem;
-    line-height: 1.6;
-}
-
-.primary-text-mobile {
-    font-size: 1.6rem;
-    line-height: 1.5;
-}
-
-.secondary-text-mobile {
-    font-size: 1.4rem;
-    line-height: 1.43;
-}
-
-.third-text-mobile {
-    font-size: 1.2rem;
-    line-height: 1.5;
-    color: var(--fifth-color);
 }
 
 
@@ -148,7 +130,6 @@ a {
 
 .bar-menu {
     background-color: unset;
-    border: none;
 }
 
 .nav__list-menu {
@@ -163,13 +144,12 @@ a {
 }
 
 .closebtn {
-    color: #FFF;
+    color: var(--second-color);
     top: 10px;
     right: 20px;
     font-size: 35px;
     margin-left: 50px;
     background-color: unset;
-    border: none;
 }
 
 
@@ -196,12 +176,8 @@ a {
 
 .btn-search {
     order: 1;
-    background: none;
     font-size: 18px;
     color: var(--fifth-color);
-    cursor: pointer;
-    outline: none;
-    border: none;
 }
 
 .input-search {
@@ -211,8 +187,6 @@ a {
     font-weight: 700;
     max-width: 175px;
     width: 100%;
-    outline: none;
-    border: none;
 }
 
 .input-search::-webkit-input-placeholder {
@@ -234,15 +208,14 @@ a {
 /* Drop-Down-Language */
 
 .button__dropdown {
+    font-family: var(--primary-font);
+    font-weight: 700;
     color: var(--primary-color);
-    border: none;
-    cursor: pointer;
-    background: none;
     gap: 8px;
 }
 
 .dropdown-content {
-    background-color: #f1f1f1;
+    background-color: var(--second-color);
     min-width: 160px;
     overflow: auto;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
@@ -253,6 +226,10 @@ a {
     color: var(--primary-color);
     padding: 12px 16px;
     text-decoration: none;
+}
+
+.nav__link-language:hover {
+    background-color: #FCEED5;
 }
 
 .show {
@@ -292,7 +269,7 @@ a {
     background-position: center;
 }
 
-.banner-main-bg-2 {
+.background-banner-2 {
     background-image: url("../images/banner/main-banner-2.png");
 }
 
@@ -305,6 +282,12 @@ a {
 .img-banner-main {
     padding-left: 20px;
     margin-bottom: -4px;
+}
+
+.img-banner-main-2 {
+    margin-bottom: -4px;
+    height: 383px;
+    width: 538px;
 }
 
 .content-banner-header {
@@ -324,27 +307,22 @@ a {
     margin-top: 4px;
 }
 
+.text-cont-bann-header-3 {
+    padding-block: 24px 34px;
+}
+
 .content-banner-main {
     padding-block: 64px 56px;
 }
 
 .content-banner-main-1 {
     text-align: right;
-    /* trừ 16px của .container */
     padding-inline: 0 85px;
 }
 
 .content-banner-main-2 {
     text-align: left;
     padding-inline: 85px 0;
-}
-
-.primary-text-desktop {
-    margin-block: 24px 34px;
-}
-
-.secondary-text-desktop {
-    margin-block: 7px 25px;
 }
 
 .button-groups {
@@ -355,22 +333,25 @@ a {
     gap: 16px;
 }
 
-.cont-bann-1 {
-    font-size: 52px;
+.heading-extra-large {
+    margin-bottom: 2px;
 }
 
-.cont-bann-2 {
-    font-size: 36px;
-    line-height: 54px;
+.heading-bann-main-2 {
     margin-top: 2px;
 }
 
-.cont-bann-3 {
-    font-size: 12px;
-    line-height: 18px;
+.text-cont-bann-main {
     width: 100%;
     max-width: 394px;
-    margin-block: 7px 25px;
+}
+
+.text-cont-bann-main-1 {
+    padding-block: 7px 25px;
+}
+
+.text-cont-bann-main-2 {
+    padding-block: 8px 42px;
 }
 
 .button-icon {
@@ -382,9 +363,7 @@ a {
 /* =====SECTION CARD==== */
 
 .subheading {
-    color: #000;
-    font-size: 16px;
-    line-height: 24px;
+    color: var(--sixth-color);
 }
 
 .section-pet-seller {
@@ -395,19 +374,12 @@ a {
     gap: 8px;
 }
 
-.section-heading {
-    align-items: center;
-}
-
 .section--card {
     margin-top: 28px;
 }
 
 .grid__item {
-    /* background-color: blue; */
-    /* width: 264px; */
     border-radius: 12px;
-    overflow: hidden;
     background-color: var(--second-color);
     box-shadow: 0px 4px 28px -2px rgba(0, 0, 0, 0.08);
 }
@@ -426,7 +398,6 @@ a {
 
 .card__media {
     border-radius: 12px;
-    cursor: pointer;
 }
 
 .card__media-product {
@@ -456,8 +427,6 @@ a {
 }
 
 .card-heading {
-    font-size: 16px;
-    line-height: 1.5;
     margin-block: unset;
     margin-inline: unset;
 }
@@ -466,28 +435,17 @@ a {
     margin-top: 10px;
 }
 
-.card-title {
-    font-family: var(--secondary-font);
-    text-decoration: none;
-    color: var(--fourth-color);
-}
-
 .product-info {
     margin-block: 4px;
     color: var(--fifth-color);
     font-size: 12px;
     line-height: 1.8;
-    justify-content: flex-start;
-    align-items: center;
 }
 
 .dot-grey {
-    padding: 8px 8px;
-}
-
-.dot-dot-gr {
     width: 3px;
     height: 3px;
+    margin: 8px 8px;
     border-radius: 10px;
     background: var(--fifth-color);
 }
@@ -496,22 +454,13 @@ a {
     font-family: var(--primary-font);
 }
 
-.product-price {
-    font-size: 14px;
-    line-height: 20px;
-}
-
 .product-gift {
     width: 100%;
     padding: 6px 10px 4px 10px;
-    align-items: center;
     gap: 2px;
-    align-self: stretch;
     border-radius: 8px;
     background: #FCEED5;
     margin-top: 10px;
-    border: none;
-    cursor: pointer;
 }
 
 .img-product-gift {
@@ -520,12 +469,9 @@ a {
 }
 
 .dot-blue {
-    padding: 10px 8px;
-}
-
-.dot-dot-bl {
     width: 4px;
     height: 4px;
+    margin: 10px 8px;
     border-radius: 10px;
     background: var(--main-color);
 }
@@ -550,12 +496,10 @@ a {
     /* border:  1px solid; */
     width: 100%;
     height: 112px;
-    align-items: center;
     gap: 30px;
-    justify-content: space-around;
 }
 
-.section-brand img {
+.image-brand {
     cursor: pointer;
     padding: 10px;
     object-fit: unset;
@@ -612,15 +556,12 @@ a {
 
 .container-footer {
     font-weight: 600;
-    justify-content: flex-end;
-    align-items: flex-start;
     gap: 40px;
 }
 
 .register-contact {
     width: 100%;
     padding-bottom: 0;
-    align-items: flex-start;
     border-bottom: 1px solid #CCD1D2;
     margin: 0 auto;
 }
@@ -628,7 +569,6 @@ a {
 .register-form {
     width: 100%;
     padding: 32px;
-    align-items: flex-start;
     gap: 20px;
     border-radius: 16px;
     background: var(--main-color);
@@ -637,17 +577,11 @@ a {
 .cont-form-register {
     width: 35%;
     color: var(--second-color);
-    font-size: 24px;
-    line-height: 36px;
-    text-transform: capitalize;
-    font-family: var(--secondary-font);
-    font-weight: 500;
 }
 
 .form-your-email {
     width: 61%;
     padding: 12px;
-    align-items: center;
     gap: 12px;
     border-radius: 14px;
     background: #FFF;
@@ -657,18 +591,14 @@ a {
 .input-email {
     width: 100%;
     padding: 14px 28px;
-    align-items: center;
     gap: 10px;
     flex: 1 0 0;
     border-radius: 8px;
-    border: 1px solid;
     background: #FFF;
     border: 1px solid #99A2A5;
     font-size: 14px;
     line-height: 20px;
     font-family: var(--primary-font);
-    font-weight: 600;
-    outline: none;
 }
 
 
@@ -682,26 +612,20 @@ a {
     max-width: 163px;
     width: 100%;
     padding: 12px 28px;
-    align-items: center;
     gap: 10px;
     border-radius: 8px;
     background: var(--main-color);
     font-size: 16px;
     line-height: 24px;
     color: var(--second-color);
-    cursor: pointer;
-    border: none;
 }
 
 .info-contact {
     width: 100%;
-    align-items: flex-start;
-    /* gap: 562px; */
     padding: 40px 0;
 }
 
 .info {
-    align-items: flex-start;
     gap: 60px;
 }
 
@@ -709,11 +633,9 @@ a {
     color: var(--fourth-color);
     font-size: 16px;
     line-height: 24px;
-    cursor: pointer;
 }
 
 .contact {
-    align-items: center;
     gap: 40px;
     font-size: 24px;
     color: var(--fourth-color);
@@ -722,11 +644,9 @@ a {
 .content-footer {
     color: var(--fifth-color);
     font-size: 14px;
-    font-weight: 600;
     line-height: 20px;
     margin: 0 auto;
     width: 100%;
-    align-items: center;
 }
 
 .terms-privacy {
