@@ -206,3 +206,128 @@
 .ol-none {
     outline: none;
 }
+
+
+/* ====RESPONSIVE MOBILE==== 
+   =====Bootstrap Breakpoints=====*/
+
+
+/* ====breakpoint extra small==== */
+
+@media (max-width:576px) {
+    .d-none-xs {
+        display: none;
+    }
+}
+
+
+/* ====breakpoint small==== */
+
+@media (min-width:576px) {
+    .d-none-sm {
+        display: none;
+    }
+}
+
+
+/* ====breakpoint medium==== */
+
+@media (min-width:768px) {
+    .d-none-md {
+        display: none;
+    }
+}
+
+
+/* ====breakpoint large==== */
+
+@media (min-width:992px) {
+    .d-none-lg {
+        display: none;
+    }
+}
+
+
+/* ====breakpoint extra large==== */
+
+@media (min-width:1200px) {
+    .d-none-xl {
+        display: none;
+    }
+}
+
+
+/* ====breakpoint extra extra large==== */
+
+@media (min-width:1440px) {
+    .d-none-xxl {
+        display: none;
+    }
+}
+
+
+/* ====RESPONSIVE DESKTOP==== 
+   =====Breakpoints=====*/
+
+
+/* ====breakpoint extra small==== */
+
+@media (max-width:414px) {
+    .d-none.xs-desktop {
+        display: none;
+    }
+}
+
+
+/* ====breakpoint small==== */
+
+@media (max-width:576px) {
+    .d-none.sm-desktop {
+        display: none;
+    }
+}
+
+
+/* ====breakpoint medium==== */
+
+@media (max-width:768px) {
+    .d-none-md-desktop {
+        display: none;
+    }
+}
+
+
+/* ====breakpoint large==== */
+
+@media (max-width:992px) {
+    .d-none-lg-desktop {
+        display: none;
+    }
+}
+
+
+/* ====breakpoint extra large==== */
+
+@media (max-width:1200px) {
+    .d-none-xl-desktop {
+        display: none;
+    }
+}
+
+
+/* ====breakpoint extra extra large==== */
+
+@media (max-width:1440px) {
+    .d-none-xxl-desktop {
+        display: none;
+    }
+}
+
+
+/* ====breakpoint extra extra extra large==== */
+
+@media (min-width:1440px) {
+    .d-none-xxxl-desktop {
+        display: none;
+    }
+}

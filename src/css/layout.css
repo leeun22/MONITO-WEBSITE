@@ -170,21 +170,9 @@ img {
     }
 }
 
-@media (max-width:992px) {
-    .button-header {
-        display: none;
-    }
-    .nation-dropdown {
-        display: none;
-    }
-}
-
 @media (max-width:768px) {
     .search {
         width: unset;
-    }
-    .input-search {
-        display: none;
     }
     .search {
         padding: 0;
@@ -309,6 +297,9 @@ img {
 }
 
 @media (max-width:581px) {
+    .d-none-mb581 {
+        display: none;
+    }
     .card-heading {
         font-size: 14px;
         line-height: 1.43;
@@ -332,9 +323,6 @@ img {
         line-height: 1.5;
         margin-block: 4px 8px;
     }
-    .dot-grey {
-        display: none;
-    }
     .card {
         gap: 12px;
     }
@@ -343,9 +331,6 @@ img {
     }
     .section-header__view-more {
         width: 100%;
-    }
-    .section-header__view-more-desktop {
-        display: none;
     }
     .section-header__view-more-mobile {
         display: block;
@@ -357,15 +342,6 @@ img {
     }
     .card-product {
         padding: 8px;
-    }
-    .section--our-products {
-        display: none;
-    }
-    .section-pet-seller {
-        display: none;
-    }
-    .section--banner-main-2 {
-        display: none;
     }
     .section-card,
     .section-content {
